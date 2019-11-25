@@ -2,8 +2,7 @@
   <view class="border-bottom search-box flex jc-between">
     <input class="search flex-1" placeholder="搜索" type="text" confirm-type="search" />
     <view class="sw-icon" bindtap="changeMode">
-      <image src="/images/sw-list.png" mode="widthFix" wx:if="{{!mode}}"></image>
-      <image src="/images/sw-block.png" mode="widthFix" wx:else></image>
+      <image src="{{!mode ? '/images/sw-list.png' : '/images/sw-block.png'}}" mode="widthFix" ></image>
     </view>
     <icon type="search" size="20" class="search-icon"></icon>
   </view>
