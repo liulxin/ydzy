@@ -1,0 +1,53 @@
+/* miniprogram/pages/hero/hero.wxss */
+
+/* search start */
+
+.search-box {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 15rpx 15rpx;
+}
+
+.search {
+  border: 1px solid #ebebeb;
+  height: 42rpx;
+  border-radius: 21rpx;
+  font-size: 32rpx;
+  color: #888;
+  padding-left: 55rpx;
+}
+
+.sw-icon {
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+  width: 50rpx;
+  text-align: center;
+}
+
+.sw-icon image {
+  width: 24rpx;
+}
+
+.search-icon {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+}
+
+/* search end */
+
+/* heros list start */
+
+.champion {
+  height: 200rpx;
+}
+
+.champion .info {
+}
+
+.champion .pic {
+  width: 60%;
+}
+
+/* heros list end */

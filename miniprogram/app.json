@@ -1,26 +1,47 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room"
+    "pages/hero/hero",
+    "pages/goods/goods",
+    "pages/rank/rank",
+    "pages/team/team"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "云顶之弈",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#5ff366",
+    "list": [
+      {
+        "pagePath": "pages/hero/hero",
+        "text": "英雄",
+        "iconPath": "images/hero.png",
+        "selectedIconPath": "images/hero-active.png"
+      },
+      {
+        "pagePath": "pages/goods/goods",
+        "text": "装备",
+        "iconPath": "images/goods.png",
+        "selectedIconPath": "images/goods-active.png"
+      },
+      {
+        "pagePath": "pages/team/team",
+        "text": "阵容",
+        "iconPath": "images/team.png",
+        "selectedIconPath": "images/team-active.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "排行",
+        "iconPath": "images/rank.png",
+        "selectedIconPath": "images/rank-active.png"
+      }
+    ]
+  }
 }
