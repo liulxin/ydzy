@@ -1,0 +1,2 @@
+<!--miniprogram/pages/hero-detail/hero-detail.wxml-->
+{{id}}

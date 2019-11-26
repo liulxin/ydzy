@@ -1,44 +1,19 @@
-// miniprogram/pages/hero/hero.js
+// miniprogram/pages/hero-detail/hero-detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    mode: false, // false: list true: block
-    heroList: []
-  },
-
-  changeMode: function (e) {
-    let mode = !this.data.mode
-    this.setData({
-      mode
-    })
-  },
-
-  // 监听自定义组件 search-com 触发的search事件
-  searchHandler(e) {
-    console.log(e.detail)
+    id: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const _this = this
-    wx.cloud.callFunction({
-      name: 'heros',
-      success(res) {
-        let list = res.result.list.list.map(hero => {
-          return Object.assign({}, hero, {
-            headPic: `cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/${hero.heroId}.png`,
-            bgPic: `cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/${hero.heroId}.jpg`
-          })
-        })
-        _this.setData({
-          heroList: list
-        })
-      }
+    this.setData({
+      id: options.id
     })
   },
 

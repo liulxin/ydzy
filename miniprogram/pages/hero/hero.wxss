@@ -76,13 +76,14 @@ page, .hero-view {
 }
 
 .champion .info .name {
-  font-size: 32rpx;
+  font-size: 28rpx;
   vertical-align: middle;
 }
 
 .champion .info .price {
   margin-left: 20rpx;
   vertical-align: middle;
+  font-size: 28rpx;
 }
 
 .champion .info .price .ico {
@@ -97,4 +98,17 @@ page, .hero-view {
   width: 60%;
 }
 
+.race-job{
+  font-size: 28rpx;
+}
+
+.race-job image {
+  width: 25rpx;
+  max-height: 30rpx;
+  vertical-align: middle;
+}
+
+.scroll.block {
+  
+}
 /* heros list end */

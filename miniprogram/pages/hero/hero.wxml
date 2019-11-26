@@ -8,8 +8,8 @@
     <icon type="search" size="20" class="search-icon"></icon>
   </view>
   <!-- 列表区域 -->
-  <scroll-view class="scroll flex-1 flex" scroll-y="true">
-    <view class="champion mt-20" wx:for="{{heroList}}" wx:for-item="hero" wx:key="key">
+  <scroll-view class="scroll flex-1 flex {{mode ? 'block' : ''}}" scroll-y="true" >
+    <navigator class="champion mt-20" wx:for="{{heroList}}" wx:for-item="hero" wx:key="key" url="../hero-detail/hero-detail?id={{hero.heroId}}">
       <view class="info flex jc-start">
         <view class="info-cont flex jc-end flex-column">
           <view class="title">{{hero.hero_tittle}}</view>
@@ -22,23 +22,19 @@
               {{hero.price}}
             </view>
           </view>
-          <view class="flex">
-            <view class="mr-10">
-              {{hero.race}}
+          <view class="flex race-job mt-10">
+            <view class="mr-10" wx:for="{{hero.race}}" wx:for-item="race">
+              <image src="../../images/race-{{race.key}}.png" mode="widthFix"></image>
+              {{race.race_name}}
             </view>
-            <view class="mr-10">
-              {{hero.job}}
-            </view>
-            <view class="mr-10" hidden="{{hero.otherrace === 0}}">
-              {{hero.otherrace}}
-            </view>
-            <view class="mr-10" hidden="{{hero.otherjob === 0}}">
-              {{hero.otherjob}}
+            <view class="mr-10" wx:for="{{hero.job}}" wx:for-item="job">
+              <image src="../../images/job-{{job.key}}.png" mode="widthFix"></image>
+              {{job.job_name}}
             </view>
           </view>
         </view>
       </view>
       <image class="pic" src="{{!mode ? hero.bgPic : hero.headPic}}" mode="widthFix" lazy-load="true" />
-    </view>
+    </navigator>
   </scroll-view>
 </view>
