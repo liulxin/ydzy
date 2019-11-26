@@ -47,3 +47,7 @@
 .flex-column {
   flex-direction: column;
 }
+
+.al-center{
+  vertical-align: center;
+}

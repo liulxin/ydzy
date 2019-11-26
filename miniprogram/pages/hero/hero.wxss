@@ -88,6 +88,7 @@ page, .hero-view {
 
 .champion .info .price .ico {
   width: 20rpx;
+  max-height: 20rpx;
   vertical-align: middle;
 }
 
@@ -98,7 +99,7 @@ page, .hero-view {
   width: 60%;
 }
 
-.race-job{
+.race-job {
   font-size: 28rpx;
 }
 
@@ -107,8 +108,34 @@ page, .hero-view {
   max-height: 30rpx;
   vertical-align: middle;
 }
-
-.scroll.block {
-  
+.scroll.block .champion{
+  font-size: 32rpx;
+  height: 100rpx;
+  border-bottom: 1px dashed rgba(200, 200, 200, 0.608);
 }
+.scroll.block .pic {
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+}
+.scroll.block .bname{
+  line-height: 80rpx;
+  margin-left: 10rpx;
+}
+.scroll.block .ic {
+  width: 25rpx;
+  max-height: 30rpx;
+  vertical-align: middle;
+}
+
+.scroll.block .br{
+  width: 200rpx;
+}
+.scroll.block .bj{
+  width: 200rpx;
+}
+.scroll.block .bp{
+  width: 50rpx;
+}
+
 /* heros list end */
