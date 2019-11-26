@@ -1,5 +1,15 @@
-.mt-20{
+@import './style/common.wxss';
+
+.mt-20 {
   margin-top: 20rpx;
+}
+
+.mt-10 {
+  margin-top: 10rpx;
+}
+
+.mr-10 {
+  margin-right: 10rpx;
 }
 
 .border-bottom {
@@ -8,6 +18,14 @@
 
 .flex {
   display: flex;
+}
+
+.jc-start {
+  justify-content: flex-start;
+}
+
+.jc-end {
+  justify-content: flex-end;
 }
 
 .jc-between {
@@ -24,4 +42,8 @@
 
 .flex-1 {
   flex: 1;
+}
+
+.flex-column {
+  flex-direction: column;
 }

@@ -1,0 +1,9 @@
+/* components/search-com/search-com.wxss */
+.search {
+  border: 1px solid #ebebeb;
+  height: 42rpx;
+  border-radius: 21rpx;
+  font-size: 32rpx;
+  color: #888;
+  padding-left: 55rpx;
+}

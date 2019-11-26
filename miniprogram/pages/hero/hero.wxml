@@ -1,18 +1,44 @@
-<view class="hero-view">
+<view class="hero-view flex flex-column">
+  <!-- 搜索区域 -->
   <view class="border-bottom search-box flex jc-between">
-    <input class="search flex-1" placeholder="搜索" type="text" confirm-type="search" />
+    <search-com class="flex-1" bind:search="searchHandler"></search-com>
     <view class="sw-icon" bindtap="changeMode">
-      <image src="{{!mode ? '/images/sw-list.png' : '/images/sw-block.png'}}" mode="widthFix" ></image>
+      <image src="{{ mode ? '/images/sw-list.png' : '/images/sw-block.png'}}" mode="widthFix"></image>
     </view>
     <icon type="search" size="20" class="search-icon"></icon>
   </view>
-  <view class="champion-list mt-20">
-    <view class="champion flex">
-      <view class="info flex-1">
-        戴安娜
+  <!-- 列表区域 -->
+  <scroll-view class="scroll flex-1 flex" scroll-y="true">
+    <view class="champion mt-20" wx:for="{{heroList}}" wx:for-item="hero" wx:key="key">
+      <view class="info flex jc-start">
+        <view class="info-cont flex jc-end flex-column">
+          <view class="title">{{hero.hero_tittle}}</view>
+          <view class="flex mt-10">
+            <view class="name">
+              {{hero.hero_name}}
+            </view>
+            <view class="price">
+              <image class="ico" mode="widthFix" src="../../images/price.png"></image>
+              {{hero.price}}
+            </view>
+          </view>
+          <view class="flex">
+            <view class="mr-10">
+              {{hero.race}}
+            </view>
+            <view class="mr-10">
+              {{hero.job}}
+            </view>
+            <view class="mr-10" hidden="{{hero.otherrace === 0}}">
+              {{hero.otherrace}}
+            </view>
+            <view class="mr-10" hidden="{{hero.otherjob === 0}}">
+              {{hero.otherjob}}
+            </view>
+          </view>
+        </view>
       </view>
-      <image class="pic" src="/images/dnn.jpg" mode="widthFix" />
+      <image class="pic" src="{{!mode ? hero.bgPic : hero.headPic}}" mode="widthFix" lazy-load="true" />
     </view>
-    
-  </view>
+  </scroll-view>
 </view>

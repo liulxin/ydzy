@@ -1,0 +1,1050 @@
+.arrow-down, .arrow-up, .avatar-border-1, .avatar-border-2, .avatar-decorate,
+.badge-boutique, .badge-heighten, .badge-mode, .badge-skill-desc, .badge-update,
+.badge-weaken, .btn-check-detail:after, .btn-check-detail:hover:after,
+.btn-detail, .btn-detail-h, .btn-detail-h2, .btn-detail2, .btn-detail3,
+.btn-hero-detail, .btn-hero-detail-h, .btn-pop-lg, .btn-pop-lg1, .btn-pop-sm,
+.btn-pop-sm1, .btn-used-tick, .btn-used-tick2, .btn-wegame, .btn-wegame-h,
+.comm-icon-search, .data-bg, .detail-icon-left, .detail-icon-right,
+.dialog-close, .division-line, .division-line2, .division-line3, .division-line4,
+.echarts-down, .echarts-etc, .echarts-up, .hero-article-divider, .hero-name-line,
+.hir-divider, .hir-divider2, .icon-ability-power, .icon-ability-power2,
+.icon-act-arrow, .icon-add, .icon-area-drop, .icon-arrow, .icon-arrow-1,
+.icon-arrow-2-left, .icon-arrow-2-right, .icon-arrow-3-left, .icon-arrow-3-right,
+.icon-arrow-down, .icon-arrow-gray, .icon-arrow-gray-bot, .icon-attack-speed,
+.icon-attack-speed2, .icon-btn-arrow, .icon-btn-arrow-green, .icon-btn-arrow-h,
+.icon-check-h, .icon-check-n, .icon-checked, .icon-close, .icon-comment,
+.icon-dec, .icon-diamond, .icon-gold-coin, .icon-home-1, .icon-home-1-h,
+.icon-interrogation, .icon-look, .icon-nochecked, .icon-play, .icon-play-gray,
+.icon-play-i, .icon-play-o, .icon-plus, .icon-polo-gold, .icon-polo-gray,
+.icon-pos-bot, .icon-pos-bot-h, .icon-pos-jungle, .icon-pos-jungle-h,
+.icon-pos-mid, .icon-pos-mid-h, .icon-pos-sup, .icon-pos-sup-h, .icon-pos-top,
+.icon-pos-top-h, .icon-power-process, .icon-prefix, .icon-prefix-white,
+.icon-rank-1, .icon-rank-2, .icon-rank-3, .icon-rank-down, .icon-rank-draw,
+.icon-rank-up, .icon-reroll, .icon-rhombus-1, .icon-search, .icon-search-1,
+.icon-settings, .icon-settings-h, .icon-shape, .icon-shapes1, .icon-shapes1-h,
+.icon-skill-bubble-title, .icon-star, .icon-tab-bottom, .icon-triangle-1,
+.icon-triangle-2, .icon-veteran-1, .icon-wrench, .icon-xx-1, .line-1, .line-2,
+.line-3, .line-4, .line-5, .line-table, .line-video-left, .line-video-mid,
+.line-video-right, .logo-divider, .logo-guide, .logo-lol, .m-hero-arrow-left,
+.m-hero-rank table .rank-down:before, .m-hero-rank table .rank-draw:before,
+.m-hero-rank table .rank-up:before, .m-location .location-home:before,
+.m-location .location-home:hover:before, .m-page-ctrl>.pagenext:after,
+.m-page-ctrl>.pagenextnone:after, .m-page-ctrl>.previouspage:after,
+.m-page-ctrl>.previouspageone:after, .m-page-ctrl>.u-rnl:after,
+.m-page-ctrl>.u-rnr:after, .news-frame, .pagination-active, .pagination-active2,
+.pagination-default, .pagination-default2, .play-btn, .pop .pop-close:after,
+.pop-close, .pos-bottom, .pos-jungle, .pos-middle, .pos-support, .pos-top,
+.rank-bg-top-1, .rank-bg-top-2, .rank-bg-top-3, .rank-veteran1, .rank-veteran2,
+.rank-veteran3, .role-icon-assassin, .role-icon-fighter, .role-icon-mage,
+.role-icon-marksman, .role-icon-support, .role-icon-tank, .search-btn,
+.search-divider, .select-arrow, .select-arrow2, .skill-bubble-divider,
+.skill-divider, .slider-next, .slider-prev, .sort-ascend, .sort-descend,
+.sort-none, .sprite-img,
+.teaching-video .teaching-video-items .swiper-pagination-switch,
+.teaching-video .teaching-video-items .swiper-pagination-switch.swiper-active-switch,
+.teaching-video .teaching-video-items a:hover span:after,
+.teaching-video .teaching-video-items a>.shade:after,
+.teaching-video .teaching-video-items a>.shade:before,
+.teaching-video .teaching-video-items span:after,
+.top .head-userinfo-avatar>span, .top .logined-top .select-area:after,
+.top .logo .logo-lol:after, .top .search .btn-search:after, .top-act-link:after,
+.top-act-link:hover:after, .user-head-mask, .user-mask, th.ascend:after,
+th.descend:after, th[data-tsorter]:after {
+  background-image: url(//game.gtimg.cn/images/lol/guides/sprite-img.png);
+  background-size: 2360px 643px;
+  background-repeat: no-repeat;
+}
+
+.arrow-down {
+  background-position: -2280px -57px;
+  width: 6px;
+  height: 4px;
+}
+
+.arrow-up {
+  background-position: -2269px -57px;
+  width: 6px;
+  height: 4px;
+}
+
+.avatar-border-1 {
+  background-position: -933px -162px;
+  width: 99px;
+  height: 102px;
+}
+
+.avatar-border-2 {
+  background-position: -933px -367px;
+  width: 62px;
+  height: 61px;
+}
+
+.avatar-decorate {
+  background-position: -2267px -97px;
+  width: 12px;
+  height: 6px;
+}
+
+.badge-boutique {
+  background-position: -2257px -28px;
+  width: 64px;
+  height: 24px;
+}
+
+.badge-heighten {
+  background-position: -1084px -367px;
+  width: 18px;
+  height: 40px;
+}
+
+.badge-mode {
+  background-position: -2094px -162px;
+  width: 64px;
+  height: 24px;
+}
+
+.badge-skill-desc {
+  background-position: -1737px -269px;
+  width: 7px;
+  height: 11px;
+}
+
+.badge-update {
+  background-position: -1061px -367px;
+  width: 18px;
+  height: 40px;
+}
+
+.badge-weaken {
+  background-position: -1107px -367px;
+  width: 18px;
+  height: 40px;
+}
+
+.btn-detail-h {
+  background-position: -1037px -227px;
+  width: 100px;
+  height: 35px;
+}
+
+.btn-detail-h2 {
+  background-position: -1836px -162px;
+  width: 130px;
+  height: 48px;
+}
+
+.btn-detail {
+  background-position: -1142px -227px;
+  width: 100px;
+  height: 35px;
+}
+
+.btn-detail2 {
+  background-position: -1701px -162px;
+  width: 130px;
+  height: 48px;
+}
+
+.btn-detail3 {
+  background-position: -1971px -162px;
+  width: 118px;
+  height: 32px;
+}
+
+.btn-hero-detail-h {
+  background-position: -2007px -28px;
+  width: 120px;
+  height: 33px;
+}
+
+.btn-hero-detail {
+  background-position: -2132px -28px;
+  width: 120px;
+  height: 33px;
+}
+
+.btn-pop-lg {
+  background-position: -933px -28px;
+  width: 230px;
+  height: 50px;
+}
+
+.btn-pop-lg1 {
+  background-position: -1168px -28px;
+  width: 230px;
+  height: 50px;
+}
+
+.btn-pop-sm {
+  background-position: -1212px -162px;
+  width: 170px;
+  height: 50px;
+}
+
+.btn-pop-sm1 {
+  background-position: -1037px -162px;
+  width: 170px;
+  height: 50px;
+}
+
+.btn-used-tick {
+  background-position: -1387px -162px;
+  width: 152px;
+  height: 50px;
+}
+
+.btn-used-tick2 {
+  background-position: -1544px -162px;
+  width: 152px;
+  height: 50px;
+}
+
+.btn-wegame-h {
+  background-position: -1403px -28px;
+  width: 228px;
+  height: 45px;
+}
+
+.btn-wegame {
+  background-position: -1636px -28px;
+  width: 228px;
+  height: 45px;
+}
+
+.comm-icon-search {
+  background-position: -2326px -28px;
+  width: 23px;
+  height: 23px;
+}
+
+.data-bg {
+  background-position: 0 -560px;
+  width: 310px;
+  height: 83px;
+}
+
+.detail-icon-left {
+  background-position: -958px -433px;
+  width: 20px;
+  height: 60px;
+}
+
+.detail-icon-right {
+  background-position: -933px -433px;
+  width: 20px;
+  height: 60px;
+}
+
+.dialog-close {
+  background-position: -1117px -269px;
+  width: 52px;
+  height: 52px;
+}
+
+.division-line {
+  background-position: -1105px -128px;
+  width: 822px;
+  height: 5px;
+}
+
+.division-line2 {
+  background-position: -1971px -199px;
+  width: 314px;
+  height: 5px;
+}
+
+.division-line3 {
+  background-position: -1575px -217px;
+  width: 314px;
+  height: 5px;
+}
+
+.division-line4 {
+  background-position: -1105px -97px;
+  width: 783px;
+  height: 9px;
+}
+
+.echarts-down {
+  background-position: -2061px -227px;
+  width: 17px;
+  height: 13px;
+}
+
+.echarts-etc {
+  background-position: -2213px -97px;
+  width: 17px;
+  height: 9px;
+}
+
+.echarts-up {
+  background-position: -2083px -227px;
+  width: 17px;
+  height: 13px;
+}
+
+.hero-article-divider {
+  background-position: -700px -95px;
+  width: 7px;
+  height: 285px;
+}
+
+.hero-name-line {
+  background-position: -1037px -217px;
+  width: 533px;
+  height: 5px;
+}
+
+.hir-divider {
+  background-position: -1858px -148px;
+  width: 376px;
+  height: 5px;
+}
+
+.hir-divider2 {
+  background-position: -1932px -128px;
+  width: 391px;
+  height: 5px;
+}
+
+.icon-ability-power {
+  background-position: -1932px -227px;
+  width: 16px;
+  height: 18px;
+}
+
+.icon-ability-power2 {
+  background-position: -1953px -227px;
+  width: 17px;
+  height: 16px;
+}
+
+.icon-act-arrow {
+  background-position: -2299px -111px;
+  width: 5px;
+  height: 7px;
+}
+
+.icon-add {
+  background-position: -1748px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-area-drop {
+  background-position: -2257px -57px;
+  width: 7px;
+  height: 4px;
+}
+
+.icon-arrow-1 {
+  background-position: -2354px -28px;
+  width: 6px;
+  height: 10px;
+}
+
+.icon-arrow-2-left, .m-page-ctrl>.previouspage:after,
+.m-page-ctrl>.previouspageone:after, .m-page-ctrl>.u-rnl:after {
+  background-position: -1975px -227px;
+  width: 18px;
+  height: 15px;
+}
+
+.icon-arrow-2-right, .m-page-ctrl>.pagenext:after,
+.m-page-ctrl>.pagenextnone:after, .m-page-ctrl>.u-rnr:after {
+  background-position: -1998px -227px;
+  width: 18px;
+  height: 15px;
+}
+
+.icon-arrow-3-left {
+  background-position: -2269px -227px;
+  width: 12px;
+  height: 10px;
+}
+
+.icon-arrow-3-right {
+  background-position: -2252px -227px;
+  width: 12px;
+  height: 10px;
+}
+
+.icon-arrow-down {
+  background-position: -2332px -83px;
+  width: 15px;
+  height: 7px;
+}
+
+.icon-arrow-gray-bot, .top .logined-top .select-area:after {
+  background-position: -2313px -83px;
+  width: 14px;
+  height: 8px;
+}
+
+.icon-arrow-gray {
+  background-position: -2336px -97px;
+  width: 8px;
+  height: 5px;
+}
+
+.icon-arrow {
+  background-position: -2310px -97px;
+  width: 8px;
+  height: 5px;
+}
+
+.icon-attack-speed {
+  background-position: -1469px -269px;
+  width: 15px;
+  height: 16px;
+}
+
+.icon-attack-speed2 {
+  background-position: -1489px -269px;
+  width: 15px;
+  height: 16px;
+}
+
+.icon-btn-arrow-green {
+  background-position: -2297px -97px;
+  width: 8px;
+  height: 5px;
+}
+
+.icon-btn-arrow-h {
+  background-position: -2335px -14px;
+  width: 8px;
+  height: 5px;
+}
+
+.icon-btn-arrow {
+  background-position: -2348px -14px;
+  width: 8px;
+  height: 5px;
+}
+
+.icon-check-h {
+  background-position: -1886px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-check-n {
+  background-position: -1656px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-checked {
+  background-position: -1586px -269px;
+  width: 15px;
+  height: 14px;
+}
+
+.icon-close {
+  background-position: -1909px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-comment {
+  background-position: -2041px -227px;
+  width: 15px;
+  height: 15px;
+}
+
+.icon-dec {
+  background-position: -1105px -111px;
+  width: 601px;
+  height: 12px;
+}
+
+.icon-diamond {
+  background-position: -2021px -227px;
+  width: 15px;
+  height: 15px;
+}
+
+.icon-gold-coin {
+  background-position: -2286px -227px;
+  width: 12px;
+  height: 10px;
+}
+
+.icon-home-1-h {
+  background-position: -2148px -227px;
+  width: 13px;
+  height: 12px;
+}
+
+.icon-home-1 {
+  background-position: -2166px -227px;
+  width: 13px;
+  height: 12px;
+}
+
+.icon-interrogation {
+  background-position: -2213px -162px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-look {
+  background-position: -2127px -227px;
+  width: 16px;
+  height: 12px;
+}
+
+.icon-nochecked {
+  background-position: -1566px -269px;
+  width: 15px;
+  height: 14px;
+}
+
+.icon-play-gray {
+  background-position: -1606px -269px;
+  width: 14px;
+  height: 14px;
+}
+
+.icon-play-i {
+  background-position: -1698px -269px;
+  width: 9px;
+  height: 12px;
+}
+
+.icon-play-o {
+  background-position: -1284px -227px;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-play {
+  background-position: -1247px -227px;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-plus {
+  background-position: -2218px -227px;
+  width: 12px;
+  height: 12px;
+}
+
+.icon-polo-gold {
+  background-position: -1227px -269px;
+  width: 45px;
+  height: 42px;
+}
+
+.icon-polo-gray {
+  background-position: -1277px -269px;
+  width: 45px;
+  height: 42px;
+}
+
+.icon-pos-bot-h {
+  background-position: -1817px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-pos-bot {
+  background-position: -1840px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-pos-jungle-h {
+  background-position: -2163px -162px;
+  width: 20px;
+  height: 22px;
+}
+
+.icon-pos-jungle {
+  background-position: -2188px -162px;
+  width: 20px;
+  height: 22px;
+}
+
+.icon-pos-mid-h {
+  background-position: -1679px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-pos-mid {
+  background-position: -1702px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-pos-sup-h {
+  background-position: -2238px -162px;
+  width: 22px;
+  height: 18px;
+}
+
+.icon-pos-sup {
+  background-position: -2265px -162px;
+  width: 22px;
+  height: 18px;
+}
+
+.icon-pos-top-h {
+  background-position: -1771px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-pos-top {
+  background-position: -1794px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-power-process {
+  background-position: -1662px -269px;
+  width: 13px;
+  height: 13px;
+}
+
+.icon-prefix-white {
+  background-position: -1725px -269px;
+  width: 7px;
+  height: 11px;
+}
+
+.icon-prefix {
+  background-position: -1749px -269px;
+  width: 7px;
+  height: 11px;
+}
+
+.icon-rank-1 {
+  background-position: -1599px -227px;
+  width: 29px;
+  height: 28px;
+}
+
+.icon-rank-2 {
+  background-position: -1531px -227px;
+  width: 29px;
+  height: 28px;
+}
+
+.icon-rank-3 {
+  background-position: -1565px -227px;
+  width: 29px;
+  height: 28px;
+}
+
+.icon-rank-down {
+  background-position: -2267px -111px;
+  width: 7px;
+  height: 8px;
+}
+
+.icon-rank-draw {
+  background-position: -2291px -57px;
+  width: 7px;
+  height: 2px;
+}
+
+.icon-rank-up {
+  background-position: -2255px -111px;
+  width: 7px;
+  height: 8px;
+}
+
+.icon-reroll {
+  background-position: -2105px -227px;
+  width: 17px;
+  height: 12px;
+}
+
+.icon-rhombus-1 {
+  background-position: -2252px -97px;
+  width: 10px;
+  height: 9px;
+}
+
+.icon-search-1 {
+  background-position: -1863px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-search {
+  background-position: -2184px -227px;
+  width: 12px;
+  height: 12px;
+}
+
+.icon-settings-h {
+  background-position: -2235px -227px;
+  width: 12px;
+  height: 12px;
+}
+
+.icon-settings {
+  background-position: -2201px -227px;
+  width: 12px;
+  height: 12px;
+}
+
+.icon-shape {
+  background-position: -1712px -269px;
+  width: 8px;
+  height: 12px;
+}
+
+.icon-shapes1-h {
+  background-position: -2319px -111px;
+  width: 5px;
+  height: 7px;
+}
+
+.icon-shapes1 {
+  background-position: -2309px -111px;
+  width: 5px;
+  height: 7px;
+}
+
+.icon-skill-bubble-title {
+  background-position: -1364px -291px;
+  width: 8px;
+  height: 13px;
+}
+
+.icon-star {
+  background-position: -1625px -269px;
+  width: 14px;
+  height: 14px;
+}
+
+.icon-tab-bottom {
+  background-position: -2179px -14px;
+  width: 45px;
+  height: 7px;
+}
+
+.icon-triangle-1 {
+  background-position: -2235px -97px;
+  width: 12px;
+  height: 9px;
+}
+
+.icon-triangle-2 {
+  background-position: -2284px -97px;
+  width: 8px;
+  height: 6px;
+}
+
+.icon-veteran-1 {
+  background-position: -1327px -269px;
+  width: 32px;
+  height: 36px;
+}
+
+.icon-wrench {
+  background-position: -1633px -227px;
+  width: 18px;
+  height: 19px;
+}
+
+.icon-xx-1 {
+  background-position: -1725px -227px;
+  width: 18px;
+  height: 18px;
+}
+
+.line-1 {
+  background-position: -933px -14px;
+  width: 1241px;
+  height: 9px;
+}
+
+.line-2 {
+  background-position: -1711px -111px;
+  width: 539px;
+  height: 8px;
+}
+
+.line-3 {
+  background-position: -1747px -83px;
+  width: 561px;
+  height: 8px;
+}
+
+.line-4 {
+  background-position: -1105px -138px;
+  width: 785px;
+  height: 5px;
+}
+
+.line-5 {
+  background-position: -933px 0;
+  width: 1427px;
+  height: 9px;
+}
+
+.line-table {
+  background-position: -1893px -97px;
+  width: 315px;
+  height: 9px;
+}
+
+.line-video-left {
+  background-position: -2229px -14px;
+  width: 48px;
+  height: 5px;
+}
+
+.line-video-mid {
+  background-position: -1130px -367px;
+  width: 5px;
+  height: 37px;
+}
+
+.line-video-right {
+  background-position: -2282px -14px;
+  width: 48px;
+  height: 5px;
+}
+
+.logo-divider {
+  background-position: -983px -433px;
+  width: 1px;
+  height: 38px;
+}
+
+.logo-guide {
+  background-position: -1869px -28px;
+  width: 133px;
+  height: 40px;
+}
+
+.logo-lol {
+  background-position: -933px -97px;
+  width: 167px;
+  height: 60px;
+}
+
+.m-hero-arrow-left {
+  background-position: -2323px -97px;
+  width: 8px;
+  height: 5px;
+}
+
+.news-frame {
+  background-position: -700px 0;
+  width: 228px;
+  height: 90px;
+}
+
+.pagination-active {
+  background-position: -1644px -269px;
+  width: 13px;
+  height: 13px;
+}
+
+.pagination-active2,
+.teaching-video .teaching-video-items .swiper-pagination-switch.swiper-active-switch {
+  background-position: -1448px -269px;
+  width: 16px;
+  height: 16px;
+}
+
+.pagination-default {
+  background-position: -1680px -269px;
+  width: 13px;
+  height: 13px;
+}
+
+.pagination-default2,
+.teaching-video .teaching-video-items .swiper-pagination-switch {
+  background-position: -1406px -269px;
+  width: 16px;
+  height: 16px;
+}
+
+.play-btn {
+  background-position: -933px -269px;
+  width: 93px;
+  height: 93px;
+}
+
+.pop-close {
+  background-position: -1385px -269px;
+  width: 16px;
+  height: 16px;
+}
+
+.pos-bottom {
+  background-position: -2340px -162px;
+  width: 17px;
+  height: 17px;
+}
+
+.pos-jungle {
+  background-position: -1364px -269px;
+  width: 16px;
+  height: 17px;
+}
+
+.pos-middle {
+  background-position: -2318px -162px;
+  width: 17px;
+  height: 17px;
+}
+
+.pos-support {
+  background-position: -2292px -162px;
+  width: 21px;
+  height: 17px;
+}
+
+.pos-top {
+  background-position: -1427px -269px;
+  width: 16px;
+  height: 16px;
+}
+
+.rank-bg-top-1 {
+  background-position: 0 0;
+  width: 695px;
+  height: 275px;
+}
+
+.rank-bg-top-2 {
+  background-position: 0 -280px;
+  width: 240px;
+  height: 275px;
+}
+
+.rank-bg-top-3 {
+  background-position: -245px -280px;
+  width: 240px;
+  height: 275px;
+}
+
+.rank-veteran1 {
+  background-position: -1547px -269px;
+  width: 14px;
+  height: 16px;
+}
+
+.rank-veteran2 {
+  background-position: -1509px -269px;
+  width: 14px;
+  height: 16px;
+}
+
+.rank-veteran3 {
+  background-position: -1528px -269px;
+  width: 14px;
+  height: 16px;
+}
+
+.role-icon-assassin {
+  background-position: -1356px -227px;
+  width: 30px;
+  height: 30px;
+}
+
+.role-icon-fighter {
+  background-position: -1426px -227px;
+  width: 30px;
+  height: 30px;
+}
+
+.role-icon-mage {
+  background-position: -1461px -227px;
+  width: 30px;
+  height: 30px;
+}
+
+.role-icon-marksman {
+  background-position: -1496px -227px;
+  width: 30px;
+  height: 30px;
+}
+
+.role-icon-support {
+  background-position: -1321px -227px;
+  width: 30px;
+  height: 30px;
+}
+
+.role-icon-tank {
+  background-position: -1391px -227px;
+  width: 30px;
+  height: 30px;
+}
+
+.search-btn {
+  background-position: -1031px -269px;
+  width: 81px;
+  height: 54px;
+}
+
+.search-divider {
+  background-position: -933px -83px;
+  width: 809px;
+  height: 9px;
+}
+
+.select-arrow {
+  background-position: -2352px -83px;
+  width: 8px;
+  height: 6px;
+}
+
+.select-arrow2 {
+  background-position: -2349px -97px;
+  width: 5px;
+  height: 3px;
+}
+
+.skill-bubble-divider {
+  background-position: -1895px -138px;
+  width: 439px;
+  height: 5px;
+}
+
+.skill-divider {
+  background-position: -1105px -148px;
+  width: 748px;
+  height: 5px;
+}
+
+.slider-next {
+  background-position: -933px -498px;
+  width: 16px;
+  height: 72px;
+}
+
+.slider-prev {
+  background-position: -954px -498px;
+  width: 16px;
+  height: 72px;
+}
+
+.sort-ascend {
+  background-position: -2289px -111px;
+  width: 5px;
+  height: 8px;
+}
+
+.sort-descend {
+  background-position: -2279px -111px;
+  width: 5px;
+  height: 8px;
+}
+
+.sort-none {
+  background-position: -2354px -43px;
+  width: 5px;
+  height: 8px;
+}

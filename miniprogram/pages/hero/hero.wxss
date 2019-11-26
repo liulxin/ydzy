@@ -1,5 +1,9 @@
 /* miniprogram/pages/hero/hero.wxss */
 
+page, .hero-view {
+  height: 100%;
+}
+
 /* search start */
 
 .search-box {
@@ -7,6 +11,7 @@
   top: 0;
   left: 0;
   padding: 15rpx 15rpx;
+  height: 72rpx;
 }
 
 .search {
@@ -39,14 +44,56 @@
 
 /* heros list start */
 
+.scroll {
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+
 .champion {
+  position: relative;
+  top: 0;
+  left: 0;
   height: 200rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
 }
 
 .champion .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #17182c, #17182c 30%, #1d182e 40%, transparent 80%);
+  z-index: 2;
+  color: #f9f9ff;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.champion .info .title {
+  font-size: 24rpx;
+}
+
+.champion .info .name {
+  font-size: 32rpx;
+  vertical-align: middle;
+}
+
+.champion .info .price {
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+
+.champion .info .price .ico {
+  width: 20rpx;
+  vertical-align: middle;
 }
 
 .champion .pic {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 60%;
 }
 
