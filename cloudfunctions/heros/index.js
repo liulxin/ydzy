@@ -20,7 +20,7 @@ exports.main = async(event, context) => {
           $.eq(['$key', '$$heros_job']),
           $.eq(['$key', '$$heros_ojob'])
         ]))).done(),
-      as: 'job'
+      as: 'job_'
     }).lookup({
       from: 'traces',
       let: {
@@ -32,7 +32,7 @@ exports.main = async(event, context) => {
           $.eq(['$key', '$$traces_race']),
           $.eq(['$key', '$$traces_orace'])
         ]))).done(),
-      as: 'race'
+      as: 'race_'
     })
     .limit(100)
     .end()

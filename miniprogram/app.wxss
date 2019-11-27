@@ -48,6 +48,9 @@
   flex-direction: column;
 }
 
+.tx-center{
+  text-align: center;
+}
 .al-center{
   vertical-align: center;
 }

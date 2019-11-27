@@ -1,0 +1,6 @@
+<!--components/flex-list/flex-list.wxml-->
+<view class="flex-list">
+  <view wx:for="{{list}}" bindtap="itemClick" wx:for-item="item" wx:key="index" data-key="{{item.value}}" class="{{item.value === active ? 'active' : ''}}">
+    {{item.label}}
+  </view>
+</view>

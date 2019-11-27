@@ -1,15 +1,40 @@
-<view class="hero-view flex flex-column">
-  <!-- 搜索区域 -->
-  <view class="border-bottom search-box flex jc-between">
-    <search-com class="flex-1" bind:search="searchHandler"></search-com>
-    <view class="sw-icon" bindtap="changeMode">
-      <image src="{{ mode ? '/images/sw-list.png' : '/images/sw-block.png'}}" mode="widthFix"></image>
+<view class="hero-view flex flex-column" bindtap="removeFilter">
+  <view class="fixed">
+    <!-- 搜索区域 -->
+    <view class="border-bottom search-box flex jc-between">
+      <search-com class="flex-1" bind:search="searchHandler"></search-com>
+      <view class="sw-icon" bindtap="changeMode">
+        <image src="{{ mode ? '/images/sw-list.png' : '/images/sw-block.png'}}" mode="widthFix"></image>
+      </view>
+      <icon type="search" size="20" class="search-icon"></icon>
     </view>
-    <icon type="search" size="20" class="search-icon"></icon>
+    <!-- 筛选区域 -->
+    <view class="flex filter jc-between">
+      <view id="fl" class="tx-center flex-1 {{filterShow == 0 ? 'active' : ''}}" data-type="0" data-key="race" bindtap="changefilterShow">种族</view>
+      <view id="fl" class="tx-center flex-1 {{filterShow == 1 ? 'active' : ''}}" data-type="1" data-key="job" bindtap="changefilterShow">职业</view>
+      <view id="fl" class="tx-center flex-1 {{filterShow == 2 ? 'active' : ''}}" data-type="2" data-key="price" bindtap="changefilterShow">消耗</view>
+    </view>
+  </view>
+  <view class="filter-area {{filterShow < 0 ? 'hide' : '' }}">
+    <flex-list bind:click="getClick" list="{{raceList}}" wx:if="{{filterShow == 0}}" active="{{(filterType_ === 'race' || !filterValue) ? filterValue : -1}}"></flex-list>
+    <flex-list bind:click="getClick" list="{{jobList}}" wx:if="{{filterShow == 1}}" active="{{( filterType_ === 'job' || !filterValue) ? filterValue : -1}}"></flex-list>
+    <flex-list bind:click="getClick" list="{{priceList}}" wx:if="{{filterShow == 2}}" active="{{( filterType_ === 'price' || !filterValue) ? filterValue : -1}}"></flex-list>
+  </view>
+  <!-- title显示 -->
+  <view class="flex jc-between sort-title">
+    <view class="flex-1 hero-t">英雄</view>
+    <view class="race-t">种族</view>
+    <view class="job-t">职业</view>
+    <view class="price-t" bindtap="sortHeroByPrice">
+      <view class="up {{sort === 'asc' ? 'active' : ''}}"></view>
+      <view class="down {{sort === 'desc' ? 'active' : ''}}"></view>
+      消耗
+    </view>
   </view>
   <!-- 列表区域 -->
-  <scroll-view class="scroll flex-1 flex {{mode ? 'block' : ''}}" scroll-y="true">
-    <navigator class="champion mt-20" wx:for="{{heroList}}" wx:for-item="hero" wx:key="key" url="../hero-detail/hero-detail?id={{hero.heroId}}">
+  <scroll-view class="scroll flex-1 flex {{mode ? 'block' : ''}}" scroll-y="true" scroll-top="{{scrollTop}}">
+    <navigator class="champion mt-20" wx:for="{{showHeroList}}" wx:for-item="hero" wx:key="key" hover-class="none" url="../hero-detail/hero-detail?id={{hero.heroId}}">
+      <!-- block -->
       <view wx:if="{{!mode}}">
         <view class="info flex jc-start">
           <view class="info-cont flex jc-end flex-column">
@@ -24,11 +49,11 @@
               </view>
             </view>
             <view class="flex race-job mt-10">
-              <view class="mr-10" wx:for="{{hero.race}}" wx:for-item="race">
+              <view class="mr-10" wx:for="{{hero.race_}}" wx:for-item="race" wx:key="index">
                 <image src="../../images/race-{{race.key}}.png" mode="widthFix"></image>
                 {{race.race_name}}
               </view>
-              <view class="mr-10" wx:for="{{hero.job}}" wx:for-item="job">
+              <view class="mr-10" wx:for="{{hero.job_}}" wx:for-item="job" wx:key="index">
                 <image src="../../images/job-{{job.key}}.png" mode="widthFix"></image>
                 {{job.job_name}}
               </view>
@@ -37,19 +62,20 @@
         </view>
         <image class="pic" src="{{hero.bgPic}}" mode="widthFix" lazy-load="true" />
       </view>
+      <!-- list -->
       <view wx:else class="flex jc-between">
         <view class="flex jc-start al-center flex-1">
           <image class="pic" src="{{hero.headPic}}" mode="widthFix" lazy-load="true" />
           <text class="bname">{{hero.hero_name}}</text>
         </view>
         <view class="flex jc-center flex-column br">
-          <view class="mr-10" wx:for="{{hero.race}}" wx:for-item="race">
+          <view class="mr-10" wx:for="{{hero.race_}}" wx:for-item="race" wx:key="index">
             <image class="ic" src="../../images/race-{{race.key}}.png" mode="widthFix"></image>
             {{race.race_name}}
           </view>
         </view>
         <view class="flex jc-center flex-column bj">
-          <view class="mr-10" wx:for="{{hero.job}}" wx:for-item="job">
+          <view class="mr-10" wx:for="{{hero.job_}}" wx:for-item="job" wx:key="index">
             <image class="ic" src="../../images/job-{{job.key}}.png" mode="widthFix"></image>
             {{job.job_name}}
           </view>

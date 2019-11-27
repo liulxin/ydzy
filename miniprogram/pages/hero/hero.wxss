@@ -4,6 +4,12 @@ page, .hero-view {
   height: 100%;
 }
 
+.fixed {
+  position: relative;
+  z-index: 22;
+  background: #fff;
+}
+
 /* search start */
 
 .search-box {
@@ -11,7 +17,7 @@ page, .hero-view {
   top: 0;
   left: 0;
   padding: 15rpx 15rpx;
-  height: 72rpx;
+  height: 60rpx;
 }
 
 .search {
@@ -41,6 +47,105 @@ page, .hero-view {
 }
 
 /* search end */
+
+/* filter start */
+
+.filter {
+  font-size: 34rpx;
+  height: 60rpx;
+  line-height: 50rpx;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.filter view {
+  border-right: 1px solid #ebebeb;
+  margin: 5rpx 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+.filter view.active{
+  color: #29aba3;
+}
+
+.filter view:last-child {
+  border-right: none;
+}
+
+.filter-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 150rpx;
+  transition: height 0.3s;
+}
+.filter-area.hide{
+  height: 0;
+  transition: height 0.3s;
+}
+
+/* filter end */
+
+/* title  satrt*/
+
+.sort-title {
+  padding: 10rpx 20rpx 10rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  background: #faf8f8;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.price-t .up {
+  position: absolute;
+  content: '';
+  top: 0rpx;
+  left: -10rpx;
+  width: 0rpx;
+  height: 0rpx;
+  border-width: 10rpx;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.price-t .up.active {
+  border-color: transparent transparent rgb(28, 114, 28) transparent;
+}
+
+.price-t .down {
+  position: absolute;
+  content: '';
+  bottom: 0rpx;
+  left: -10rpx;
+  width: 0rpx;
+  height: 0rpx;
+  border-width: 10rpx;
+  border-color: #555 transparent transparent transparent;
+  border-style: solid;
+}
+
+.price-t .down.active {
+  border-color: rgb(28, 114, 28) transparent transparent transparent;
+}
+
+.sort-title .race-t, .sort-title .job-t {
+  width: 180rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.sort-title .price-t {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80rpx;
+  text-align: center;
+}
+
+/* title  end*/
 
 /* heros list start */
 
@@ -108,34 +213,37 @@ page, .hero-view {
   max-height: 30rpx;
   vertical-align: middle;
 }
-.scroll.block .champion{
+
+.scroll.block .champion {
   font-size: 32rpx;
   height: 100rpx;
   border-bottom: 1px dashed rgba(200, 200, 200, 0.608);
 }
+
 .scroll.block .pic {
   position: relative;
   width: 80rpx;
   height: 80rpx;
 }
-.scroll.block .bname{
+
+.scroll.block .bname {
   line-height: 80rpx;
   margin-left: 10rpx;
 }
+
 .scroll.block .ic {
   width: 25rpx;
   max-height: 30rpx;
   vertical-align: middle;
 }
 
-.scroll.block .br{
-  width: 200rpx;
+.scroll.block .br, .scroll.block .bj {
+  width: 180rpx;
 }
-.scroll.block .bj{
-  width: 200rpx;
-}
-.scroll.block .bp{
-  width: 50rpx;
+
+.scroll.block .bp {
+  width: 80rpx;
+  text-align: center;
 }
 
 /* heros list end */
