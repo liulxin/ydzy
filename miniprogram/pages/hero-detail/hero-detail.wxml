@@ -1,2 +1,3 @@
 <!--miniprogram/pages/hero-detail/hero-detail.wxml-->
-{{id}}
+{{heroInfo.hero_name}}
+<image src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/items/3110.png"></image>

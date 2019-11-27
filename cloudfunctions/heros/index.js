@@ -37,7 +37,5 @@ exports.main = async(event, context) => {
     .limit(100)
     .end()
 
-  return {
-    list
-  }
+  return list
 }

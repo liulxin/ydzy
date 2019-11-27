@@ -280,8 +280,8 @@ Page({
     const _this = this
     wx.cloud.callFunction({
       name: 'heros',
-      success(res) {
-        let list = res.result.list.list.map(hero => {
+      complete(res) {
+        let list = res.result.list.map(hero => {
           return Object.assign({}, hero, {
             headPic: `cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/${hero.heroId}.png`,
             bgPic: `cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/${hero.heroId}.jpg`
