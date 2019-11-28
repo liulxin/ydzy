@@ -1,0 +1,9 @@
+<!--components/card/card.wxml-->
+<view class="card">
+  <view class="card-header">
+    <view class="title">{{title}}</view>
+  </view>
+  <view class="card-body">
+    <slot></slot>
+  </view>
+</view>

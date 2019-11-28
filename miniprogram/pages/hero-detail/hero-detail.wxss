@@ -1,1 +1,152 @@
 /* miniprogram/pages/hero-detail/hero-detail.wxss */
+
+.hero-detail {
+  background: rgb(253, 251, 251);
+}
+
+/* top start */
+
+.hero-detail .top {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.hero-detail .bg {
+  width: 100%;
+}
+
+.hero-detail .info-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30rpx 40rpx;
+}
+
+.hero-detail .info-wrap .hd {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.hero-detail .info-wrap .head {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 1px solid rgb(238, 236, 97);
+}
+
+.hero-detail .info-wrap .price {
+  position: absolute;
+  top: 80rpx;
+  right: -8rpx;
+  width: 30rpx;
+  height: 30rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background: rgb(109, 107, 238);
+  border-radius: 50%;
+  border: 1px solid rgb(238, 236, 97);
+  text-align: center;
+}
+
+.hero-detail .info-wrap .rj {
+  line-height: 40rpx;
+}
+
+.hero-detail .info-wrap .rj image {
+  width: 25rpx;
+  max-height: 30rpx;
+  vertical-align: middle;
+  margin-right: 5rpx;
+}
+
+.hero-detail .info-wrap .name {
+  font-size: 38rpx;
+}
+
+.hero-detail .info-wrap .job {
+  margin-right: 20rpx;
+}
+
+.hero-detail .info-wrap .job, .info-wrap .race {
+  font-size: 24rpx;
+  vertical-align: middle;
+}
+
+/* top end */
+
+/* level start */
+
+.hero-detail .level {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero-detail .level view {
+  width: 50%;
+  padding-left: 15rpx;
+  margin-top: 10rpx;
+}
+
+/* level end */
+
+/* skill start */
+
+.hero-detail .skill .ico {
+  width: 100rpx;
+  border: 1px solid rgb(238, 236, 97);
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+
+/* skill end */
+
+/* race job start*/
+
+.hero-detail .race, .job {
+  line-height: 1.5;
+}
+
+.hero-detail .race .num, .job .num {
+  background: rgb(20, 19, 19);
+  color: #fff;
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  text-align: center;
+  margin-right: 10rpx;
+}
+
+/* race job end */
+
+.hero-detail .equipment {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+/* cooperate start  */
+
+.hero-detail .cooperate {
+  text-align: center;
+}
+
+.hero-detail .cooperate image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1px solid rgb(238, 236, 97);
+}
+
+.hero-detail .cooperate .j, .cooperate .r {
+  margin: 10rpx 10rpx;
+}
+
+.hero-detail .cooperate .name {
+  text-align: center;
+}
+
+/* cooperate end  */

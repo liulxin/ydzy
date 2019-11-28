@@ -1,0 +1,37 @@
+/* components/card/card.wxss */
+
+.card {
+  border-bottom: 1px solid #d4d9de;
+  padding: 15rpx;
+  margin-top: 10rpx;
+  background: #fff;
+}
+
+.card-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #d4d9de;
+  padding-bottom: 5rpx;
+  font-size: 38rpx;
+}
+
+.card-header::before {
+  position: absolute;
+  top: 10rpx;
+  left: 0;
+  content: '';
+  height: 34rpx;
+  border-left: 1px solid #c9b021;
+}
+
+.card-header .title {
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  color: #000;
+}
+
+.card-body {
+  padding-top: 15rpx;
+  font-size: 32rpx;
+}

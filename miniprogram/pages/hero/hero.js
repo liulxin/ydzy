@@ -168,7 +168,6 @@ Page({
   // 监听自定义组件 search-com 触发的search事件
   searchHandler(e) {
     let { heroList } = this.data
-    console.log(e.detail)
     if (e.detail === '') {
       this.setData({
         sort: '',

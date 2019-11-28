@@ -17,7 +17,7 @@ page, .hero-view {
   top: 0;
   left: 0;
   padding: 15rpx 15rpx;
-  height: 60rpx;
+  height: 80rpx;
 }
 
 .search {

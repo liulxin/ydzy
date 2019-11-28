@@ -19,7 +19,9 @@ Page({
       },
       complete(res) {
         _this.setData({
-          heroInfo: res.result.list[0]
+          heroInfo: Object.assign({}, res.result.list[0], {
+            equipment: res.result.list[0].equipment.split(',')
+          })
         })
       }
     })
@@ -39,7 +41,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    
+
   },
 
   /**

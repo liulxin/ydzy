@@ -1,3 +1,84 @@
 <!--miniprogram/pages/hero-detail/hero-detail.wxml-->
-{{heroInfo.hero_name}}
-<image src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/items/3110.png"></image>
+<view class="hero-detail" wx:if="{{heroInfo}}">
+  <view class="top">
+    <image class="bg" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{heroInfo.heroId}}.jpg" mode="widthFix"></image>
+    <view class="info-wrap flex">
+      <view class="flex flex-column hd">
+        <image class="head" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{heroInfo.heroId}}.png" mode="widthFix"></image>
+        <text class="price">{{heroInfo.price}}</text>
+      </view>
+      <view class="flex-1 flex flex-column jc-around" style="color: #fff; font-size: 28rpx;margin-left: 30rpx;">
+        <view class="name">{{heroInfo.hero_name}} {{heroInfo.hero_tittle}}</view>
+        <view class="rj">
+          <image src="../../images/job-{{heroInfo.job[0].key}}.png" mode="widthFix"></image>
+          <text class="job">{{heroInfo.job[0].job_name}}</text>
+          <image src="../../images/race-{{heroInfo.race[0].key}}.png" mode="widthFix"></image>
+          <text class="race">{{heroInfo.race[0].race_name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 属性 -->
+  <card title="属性">
+    <view class="level">
+      <view>生命：{{heroInfo.level[0].health}}</view>
+      <view>护甲：{{heroInfo.level[0].armor}}</view>
+      <view>魔抗：{{heroInfo.level[0].magic_res}}</view>
+      <view>物攻：{{heroInfo.level[0].damage}}</view>
+      <view>攻速：{{heroInfo.level[0].speed}}</view>
+      <view>暴击率：{{heroInfo.level[0].CR}}</view>
+      <view>攻击距离：{{heroInfo.level[0].range}}</view>
+      <view>初始法力值：{{heroInfo.level[0].StartingMana}}</view>
+      <view>法力：{{heroInfo.level[0].Mana}}</view>
+    </view>
+  </card>
+  <!-- 技能 -->
+  <card title="技能">
+    <view class="skill">
+      <view class="flex">
+        <image class="ico" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/skills/{{heroInfo.heroId}}.png" mode="widthFix"></image>
+        <view class="flex flex-column jc-around p-10">
+          <view>{{heroInfo.skill_name}}</view>
+          <view>{{heroInfo.skill_type}}</view>
+        </view>
+      </view>
+      <view class="mt-10">{{heroInfo.skill_introduce}}</view>
+      <view class="mt-10">{{heroInfo.skill_num}}</view>
+    </view>
+  </card>
+  <!-- 种族 -->
+  <card title="种族-{{heroInfo.race[0].race_name}}">
+    <view class="race">
+      <view class="mt-10" wx:for="{{heroInfo.race[0].level}}" wx:for-item="race" wx:key="index">
+        <text class="num">{{race.name}}</text>
+        <text>{{race.describe}}</text>
+      </view>
+    </view>
+  </card>
+  <!-- 职业 -->
+  <card title="职业-{{heroInfo.job[0].job_name}}">
+    <view class="job">
+      <view class="mt-10" wx:for="{{heroInfo.job[0].level}}" wx:for-item="job" wx:key="index">
+        <text class="num">{{job.name}}</text>
+        <text>{{job.describe}}</text>
+      </view>
+    </view>
+  </card>
+  <!-- 推荐装备 -->
+  <card title="推荐装备">
+    <image class="equipment" wx:for="{{heroInfo.equipment}}" mode="widthFix" wx:for-item="equipment" wx:key="index" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/items/{{equipment}}.png"></image>
+  </card>
+  <!-- 协同英雄 -->
+  <card title="协同英雄">
+    <view class="flex cooperate flex-wrap jc-start">
+      <navigator wx:for="{{heroInfo.jobList.data}}" wx:for-item="job" wx:key="index" class="j" url="/pages/hero-detail/hero-detail?id={{job.heroId}}">
+        <image lazy-load="true" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{job.heroId}}.png"></image>
+        <view class="name">{{job.hero_name}}</view>
+      </navigator>
+      <navigator wx:for="{{heroInfo.raceList.data}}" wx:for-item="race" wx:key="index" class="r" url="/pages/hero-detail/hero-detail?id={{race.heroId}}">
+        <image lazy-load="true" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{race.heroId}}.png"></image>
+        <view class="name">{{race.hero_name}}</view>
+      </navigator>
+    </view>
+  </card>
+</view>

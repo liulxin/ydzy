@@ -12,7 +12,7 @@ Component({
       type: Number,
       value: 0,
       observer: function(newVal, oldVal) {
-        console.log(newVal)
+        
       }
     }
   },

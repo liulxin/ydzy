@@ -1,7 +1,14 @@
 @import './style/common.wxss';
 
+view{
+  box-sizing: border-box;
+}
 .mt-20 {
   margin-top: 20rpx;
+}
+
+.ml-20 {
+  margin-left: 20rpx;
 }
 
 .mt-10 {
@@ -10,6 +17,10 @@
 
 .mr-10 {
   margin-right: 10rpx;
+}
+
+.p-10{
+  padding: 10rpx;
 }
 
 .border-bottom {
@@ -46,6 +57,10 @@
 
 .flex-column {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .tx-center{
