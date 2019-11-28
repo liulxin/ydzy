@@ -7,17 +7,17 @@
   font-size: 32rpx;
   color: #767779;
   box-sizing: border-box;
-  padding: 20rpx;
+  padding: 0.5%;
 }
 
 .flex-list view {
   background: #f4f5f7;
-  width: 200rpx;
+  width: 31%;
   height: 60rpx;
   border-radius: 5rpx;
   text-align: center;
   line-height: 60rpx;
-  margin: 10rpx 20rpx;
+  margin: 10rpx 1%;
 }
 .flex-list view.active{
   background: #29aba3;
