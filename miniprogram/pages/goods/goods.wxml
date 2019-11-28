@@ -1,2 +1,6 @@
 <!--miniprogram/pages/goods/goods.wxml-->
-<text>miniprogram/pages/goods/goods.wxml</text>
+<view class="goods-list">
+  <view wx:for="{{list}}" wx:for-item="item" wx:key="equipmentId">
+    {{item.eq_name}}
+  </view>
+</view>
