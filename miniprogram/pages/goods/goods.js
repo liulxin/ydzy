@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    showList: [],
+    baseList: [],
+    activeIndex: 0
   },
 
   /**
@@ -15,15 +18,51 @@ Page({
     this.fetchData()
   },
 
+  // 请求数据
   fetchData() {
     const _this = this
     wx.cloud.callFunction({
       name: 'goods',
       complete(res) {
+        let data = res.result.data
+        let list = data.map(item => Object.assign({}, item, {
+          eq_formula: item.eq_formula.split(',')
+        }))
         _this.setData({
-          list: res.result.data
+          list: list,
+          showList: list,
+          baseList: data.filter(item => !item.eq_formula)
         })
       }
+    })
+  },
+
+  // 选择基础装备 装备列表显示数据改变
+  baseChange(e) {
+    let index = e.currentTarget.dataset.index
+    let id = this.data.baseList[index].equipmentId
+    let list = this.data.list.filter(item => item.eq_formula.indexOf(id) !== -1)
+    this.setData({
+      activeIndex: index,
+      showList: list
+    })
+  },
+
+  searchHandler(e) {
+    let {
+      list
+    } = this.data
+    if (e.detail === '') {
+      this.setData({
+        activeIndex: -1,
+        showList: list
+      })
+      return
+    }
+    let list_ = list.filter(item => item.eq_name.indexOf(e.detail) > -1)
+    this.setData({
+      activeIndex: -1,
+      showList: list_
     })
   },
 

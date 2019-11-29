@@ -96,6 +96,7 @@
 
 .hero-detail .skill .ico {
   width: 100rpx;
+  height: 100rpx;
   border: 1px solid rgb(238, 236, 97);
   border-radius: 10rpx;
   margin-right: 20rpx;

@@ -59,6 +59,21 @@
 					"id": -1,
 					"name": "pages/goods/goods",
 					"pathName": "pages/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/hero-detail/hero-detail?id=29",
+					"pathName": "pages/hero-detail/hero-detail",
+					"query": "id=29",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/team/team",
+					"pathName": "pages/team/team",
+					"query": "id=29",
 					"scene": null
 				}
 			]

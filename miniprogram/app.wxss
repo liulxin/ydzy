@@ -51,6 +51,10 @@ view{
   justify-content: center;
 }
 
+.ai-center{
+  align-items: center;
+}
+
 .flex-1 {
   flex: 1;
 }

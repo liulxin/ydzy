@@ -1,2 +1,5 @@
 <!--components/search-com/search-com.wxml-->
-<input class="search flex-1" bindinput="inputHandler" placeholder="搜索" type="text" confirm-type="search" />
+<view class="search-box search-class">
+  <input class="search flex-1" bindinput="inputHandler" placeholder="搜索" type="text" confirm-type="search" />
+  <icon type="search" size="20" class="search-icon"></icon>
+</view>

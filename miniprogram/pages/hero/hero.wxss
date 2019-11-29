@@ -33,11 +33,13 @@ page, .hero-view {
   margin-left: 20rpx;
   margin-right: 10rpx;
   width: 50rpx;
+  height: 50rpx;
   text-align: center;
 }
 
 .sw-icon image {
   width: 24rpx;
+  height: 24rpx;
 }
 
 .search-icon {
@@ -103,7 +105,7 @@ page, .hero-view {
 .price-t .up {
   position: absolute;
   content: '';
-  top: 0rpx;
+  top: -1rpx;
   left: -10rpx;
   width: 0rpx;
   height: 0rpx;
@@ -119,7 +121,7 @@ page, .hero-view {
 .price-t .down {
   position: absolute;
   content: '';
-  bottom: 0rpx;
+  bottom: -1rpx;
   left: -10rpx;
   width: 0rpx;
   height: 0rpx;
@@ -162,6 +164,7 @@ page, .hero-view {
   height: 200rpx;
   border-radius: 10rpx;
   overflow: hidden;
+  background: #1d182e;
 }
 
 .champion .info {
@@ -170,7 +173,7 @@ page, .hero-view {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, #17182c, #17182c 30%, #1d182e 40%, transparent 80%);
+  background-image: linear-gradient(to right, #17182c, #17182c 30%, #1d182e 50%, transparent 80%);
   z-index: 2;
   color: #f9f9ff;
   padding: 20rpx;
@@ -202,7 +205,8 @@ page, .hero-view {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60%;
+  width: 392rpx;
+  height: 200rpx;
 }
 
 .race-job {
@@ -219,6 +223,7 @@ page, .hero-view {
   font-size: 32rpx;
   height: 100rpx;
   border-bottom: 1px dashed rgba(200, 200, 200, 0.608);
+  background: #fff;
 }
 
 .scroll.block .pic {

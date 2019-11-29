@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "search-com": "/components/search-com/search-com"
+  }
 }

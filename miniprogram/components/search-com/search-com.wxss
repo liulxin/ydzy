@@ -1,4 +1,11 @@
 /* components/search-com/search-com.wxss */
+
+.search-box {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 .search {
   border: 1px solid #ebebeb;
   height: 42rpx;
@@ -6,4 +13,10 @@
   font-size: 32rpx;
   color: #888;
   padding-left: 55rpx;
+}
+
+.search-icon {
+  position: absolute;
+  top: 5rpx;
+  left: 10rpx;
 }
