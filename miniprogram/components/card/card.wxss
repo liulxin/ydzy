@@ -13,7 +13,7 @@
   left: 0;
   border-bottom: 1px solid #d4d9de;
   padding-bottom: 5rpx;
-  font-size: 38rpx;
+  font-size: 32rpx;
 }
 
 .card-header::before {
@@ -29,6 +29,9 @@
   padding-left: 15rpx;
   padding-right: 15rpx;
   color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card-body {

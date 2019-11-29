@@ -2,7 +2,6 @@
   "pages": [
     "pages/hero/hero",
     "pages/goods/goods",
-    "pages/rank/rank",
     "pages/team/team",
     "pages/hero-detail/hero-detail"
   ],
@@ -36,12 +35,6 @@
         "text": "阵容",
         "iconPath": "images/team.png",
         "selectedIconPath": "images/team-active.png"
-      },
-      {
-        "pagePath": "pages/rank/rank",
-        "text": "排行",
-        "iconPath": "images/rank.png",
-        "selectedIconPath": "images/rank-active.png"
       }
     ]
   }

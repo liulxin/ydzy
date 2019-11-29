@@ -56,14 +56,15 @@ page, .hero-view {
   font-size: 34rpx;
   height: 60rpx;
   line-height: 50rpx;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #f7f7f7;
 }
 
 .filter view {
-  border-right: 1px solid #ebebeb;
+  border-right: 1px solid #f7f7f7;
   margin: 5rpx 0;
   box-sizing: border-box;
   transition: all 0.3s;
+  font-size: 32rpx;
 }
 .filter view.active{
   color: #29aba3;

@@ -1,2 +1,12 @@
 <!--miniprogram/pages/team/team.wxml-->
-<text>miniprogram/pages/team/team.wxml</text>
+<view class="teams">
+  <card wx:for="{{list}}" wx:for-item="team" wx:key="index" title="{{team.line_name}}" wx:if="{{team.line_name}}">
+    <view class="flex jc-start flex-wrap">
+      <view wx:for="{{team.hero_location}}" wx:for-item="hero" wx:key="hero_id" class="mr-10">
+        <image class="head" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{hero.hero_id}}.png"></image>
+      </view>
+    </view>
+  </card>
+  <view wx:if="{{isLoadMore}}" class="load tx-center mt-10">loading...</view>
+  <view wx:if="{{isOver}}" class="over tx-center mt-10">已经到底啦</view>
+</view>
