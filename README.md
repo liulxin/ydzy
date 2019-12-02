@@ -14,13 +14,13 @@
 
 ## 数据库数据
 可以通过云数据库的导入功能进行导入。这里数据是拿的官网数据，但是阵容部分数据有缺失没有进行补充。  
-数据地址 [https://github.com/dongwudi/ydzy/tree/master/miniprogram](https://github.com/dongwudi/ydzy/tree/master/miniprogram)
+数据地址 [https://github.com/liulxin/ydzy/tree/master/miniprogram](https://github.com/liulxin/ydzy/tree/master/miniprogram)
 
 ## 云函数
-云函数地址 [https://github.com/dongwudi/ydzy/tree/master/cloudfunctions](https://github.com/dongwudi/ydzy/tree/master/cloudfunctions)
+云函数地址 [https://github.com/liulxin/ydzy/tree/master/cloudfunctions](https://github.com/liulxin/ydzy/tree/master/cloudfunctions)
 
 ## 图片
-图片资源地址 [https://github.com/dongwudi/ydzy/tree/master/image](https://github.com/dongwudi/ydzy/tree/master/image)
+图片资源地址 [https://github.com/liulxin/ydzy/tree/master/image](https://github.com/liulxin/ydzy/tree/master/image)
 
 ## 注意
 本地拉取代码后需将云数据库，云存储，云函数等进行更新。注意`app.js`中云环境需要修改为自己的云环境id
