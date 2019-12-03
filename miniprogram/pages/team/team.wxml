@@ -7,6 +7,4 @@
       </view>
     </view>
   </card>
-  <view wx:if="{{isLoadMore}}" class="load tx-center mt-10">loading...</view>
-  <view wx:if="{{isOver}}" class="over tx-center mt-10">已经到底啦</view>
 </view>

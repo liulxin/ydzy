@@ -31,7 +31,7 @@
     </view>
   </view>
   <!-- 列表区域 -->
-  <scroll-view class="scroll flex-1 flex {{mode ? 'block' : ''}}" scroll-y="true" scroll-top="{{scrollTop}}">
+  <scroll-view class="scroll flex-1 flex {{mode ? 'block' : ''}}" scroll-y="true" scroll-top="{{scrollTop}}" bindscrolltolower="scrollReachBottom" lower-threshold="30">
     <navigator class="champion mt-20" wx:for="{{showHeroList}}" wx:for-item="hero" wx:key="key" hover-class="none" url="../hero-detail/hero-detail?id={{hero.heroId}}">
       <!-- block -->
       <view wx:if="{{!mode}}">

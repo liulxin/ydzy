@@ -11,6 +11,9 @@ Page({
 
   // 数据请求
   fetchData() {
+    wx.showLoading({
+      title: 'loading',
+    })
     const _this = this
     wx.cloud.callFunction({
       name: 'herodetail',
@@ -18,6 +21,8 @@ Page({
         id: _this.data.id
       },
       complete(res) {
+        wx.hideLoading()
+        wx.stopPullDownRefresh()
         _this.setData({
           heroInfo: Object.assign({}, res.result.list[0], {
             equipment: res.result.list[0].equipment.split(',')
@@ -69,7 +74,9 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-
+    this.setData({
+      heroInfo: null
+    }, this.fetchData())
   },
 
   /**

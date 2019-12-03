@@ -7,35 +7,44 @@ Page({
   data: {
     list: [],
     nowSkip: 0,
-    isLoadMore: false,
     isOver: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.fetchData(0)
   },
 
   fetchData(skip) {
     let _this = this
+    wx.showLoading({
+      title: 'loading...'
+    })
     wx.cloud.callFunction({
       name: 'teams',
       data: {
         skip
       },
       complete(res) {
-        let { list } = _this.data
+        let {
+          list
+        } = _this.data
+        wx.hideLoading()
+        wx.stopPullDownRefresh()
         if (res.result.data.length) {
           _this.setData({
-            list: list.concat(res.result.data),
-            isLoadMore: false
+            list: list.concat(res.result.data)
           })
-        }else {
+          if (res.result.data.length < 15) {
+            _this.setData({
+              isOver: true
+            })
+          }
+        } else {
           _this.setData({
-            isOver: true,
-            isLoadMore: false
+            isOver: true
           })
         }
 
@@ -46,57 +55,66 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
+  onPullDownRefresh: function() {
+    this.setData({
+      list: [],
+      nowSkip: 0,
+      isOver: false
+    }, this.fetchData(0))
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-    let { nowSkip, isOver } = this.data
-    if(isOver) {
+  onReachBottom: function() {
+    let {
+      nowSkip,
+      isOver
+    } = this.data
+    if (isOver) {
+      wx.showToast({
+        title: '已经到底啦~'
+      })
       return
     }
     this.fetchData(nowSkip + 1)
     this.setData({
-      nowSkip: nowSkip + 1,
-      isLoadMore: true
+      nowSkip: nowSkip + 1
     })
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

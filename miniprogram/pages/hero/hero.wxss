@@ -32,9 +32,10 @@ page, .hero-view {
 .sw-icon {
   margin-left: 20rpx;
   margin-right: 10rpx;
-  width: 50rpx;
-  height: 50rpx;
+  width: 60rpx;
+  height: 100%;
   text-align: center;
+  line-height: 1.5;
 }
 
 .sw-icon image {

@@ -2,5 +2,6 @@
   "usingComponents": {
     "search-com": "/components/search-com/search-com",
     "flex-list": "/components/flex-list/flex-list"
-  }
+  },
+  "enablePullDownRefresh": true
 }

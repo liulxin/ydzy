@@ -8,7 +8,7 @@ Page({
     list: [],
     showList: [],
     baseList: [],
-    activeIndex: 0
+    activeIndex: -1
   },
 
   /**
@@ -21,18 +21,25 @@ Page({
   // 请求数据
   fetchData() {
     const _this = this
+    wx.showLoading({
+      title: 'loading',
+    })
     wx.cloud.callFunction({
       name: 'goods',
       complete(res) {
+        wx.hideLoading()
         let data = res.result.data
         let list = data.map(item => Object.assign({}, item, {
           eq_formula: item.eq_formula.split(',')
         }))
         _this.setData({
+          activeIndex: -1,
           list: list,
           showList: list,
           baseList: data.filter(item => !item.eq_formula)
         })
+        // 暂停下拉刷新
+        wx.stopPullDownRefresh()
       }
     })
   },
@@ -98,7 +105,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-
+    this.fetchData()
   },
 
   /**

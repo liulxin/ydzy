@@ -8,6 +8,7 @@
 3. 装备列表、搜索、筛选
 4. 阵容列表、上拉加载更多
 5. 云函数
+6. 优化页面提示，下拉刷新，英雄页渲染优化
 
 ## Demo
 ![云顶zy.png](https://upload-images.jianshu.io/upload_images/9279065-f70a1eb8850d9a2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

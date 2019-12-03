@@ -7,150 +7,152 @@ Page({
   data: {
     mode: false, // false: list true: block
     heroList: [],
+    nowHeroList: [], // 筛选后的list-- 展示数据从这里截取
     showHeroList: [], // 作展示使用
     sort: '',
+    nowSkip: 0,
     raceList: [{
-      label: '全部',
-      value: 0
-    },
-    {
-      label: '水晶',
-      value: 15
-    },
-    {
-      label: '沙漠',
-      value: 16
-    },
-    {
-      label: '雷霆',
-      value: 17
-    },
-    {
-      label: '极地',
-      value: 18
-    },
-    {
-      label: '地狱火',
-      value: 19
-    },
-    {
-      label: '光',
-      value: 20
-    },
-    {
-      label: '钢铁',
-      value: 21
-    },
-    {
-      label: '山脉',
-      value: 22
-    },
-    {
-      label: '海洋',
-      value: 23
-    },
-    {
-      label: '剧毒',
-      value: 24
-    },
-    {
-      label: '影',
-      value: 25
-    },
-    {
-      label: '云霄',
-      value: 26
-    },
-    {
-      label: '森林',
-      value: 27
-    }
+        label: '全部',
+        value: 0
+      },
+      {
+        label: '水晶',
+        value: 15
+      },
+      {
+        label: '沙漠',
+        value: 16
+      },
+      {
+        label: '雷霆',
+        value: 17
+      },
+      {
+        label: '极地',
+        value: 18
+      },
+      {
+        label: '地狱火',
+        value: 19
+      },
+      {
+        label: '光',
+        value: 20
+      },
+      {
+        label: '钢铁',
+        value: 21
+      },
+      {
+        label: '山脉',
+        value: 22
+      },
+      {
+        label: '海洋',
+        value: 23
+      },
+      {
+        label: '剧毒',
+        value: 24
+      },
+      {
+        label: '影',
+        value: 25
+      },
+      {
+        label: '云霄',
+        value: 26
+      },
+      {
+        label: '森林',
+        value: 27
+      }
     ],
     jobList: [{
-      label: '全部',
-      value: 0
-    },
-    {
-      label: '炼金师',
-      value: 11
-    },
-    {
-      label: '刺客',
-      value: 12
-    },
-    {
-      label: '大元素使',
-      value: 13
-    },
-    {
-      label: '狂战士',
-      value: 14
-    },
-    {
-      label: '召唤使',
-      value: 15
-    },
-    {
-      label: '德鲁伊',
-      value: 16
-    },
-    {
-      label: '魔法师',
-      value: 17
-    },
-    {
-      label: '秘术',
-      value: 18
-    },
-    {
-      label: '掠食者',
-      value: 19
-    },
-    {
-      label: '游侠',
-      value: 20
-    },
-    {
-      label: '守护',
-      value: 21
-    },
-    {
-      label: '剑士',
-      value: 22
-    }
+        label: '全部',
+        value: 0
+      },
+      {
+        label: '炼金师',
+        value: 11
+      },
+      {
+        label: '刺客',
+        value: 12
+      },
+      {
+        label: '大元素使',
+        value: 13
+      },
+      {
+        label: '狂战士',
+        value: 14
+      },
+      {
+        label: '召唤使',
+        value: 15
+      },
+      {
+        label: '德鲁伊',
+        value: 16
+      },
+      {
+        label: '魔法师',
+        value: 17
+      },
+      {
+        label: '秘术',
+        value: 18
+      },
+      {
+        label: '掠食者',
+        value: 19
+      },
+      {
+        label: '游侠',
+        value: 20
+      },
+      {
+        label: '守护',
+        value: 21
+      },
+      {
+        label: '剑士',
+        value: 22
+      }
     ],
     priceList: [{
-      label: '全部',
-      value: 0
-    },
-    {
-      label: '1',
-      value: 1
-    },
-    {
-      label: '2',
-      value: 2
-    },
-    {
-      label: '3',
-      value: 3
-    },
-    {
-      label: '4',
-      value: 4
-    },
-    {
-      label: '5',
-      value: 5
-    },
-    {
-      label: '6',
-      value: 6
-    },
-    {
-      label: '7',
-      value: 7
-    }
+        label: '全部',
+        value: 0
+      },
+      {
+        label: '1',
+        value: 1
+      },
+      {
+        label: '2',
+        value: 2
+      },
+      {
+        label: '3',
+        value: 3
+      },
+      {
+        label: '4',
+        value: 4
+      },
+      {
+        label: '5',
+        value: 5
+      },
+      {
+        label: '6',
+        value: 6
+      },
+      {
+        label: '7',
+        value: 7
+      }
     ],
     filterValue: 0, // 0 全部
     filterType: '', //'' 全部 race 种族 job 职业 price 消耗
@@ -158,20 +160,26 @@ Page({
     filterShow: -1 // -1 隐藏 0 种族 1 职业 2 消耗
   },
 
-  changeMode: function (e) {
+  changeMode: function(e) {
     let mode = !this.data.mode
     this.setData({
       mode
     })
+    // mode改变时也应该利用排序将数据重新截取
+    this.sortHeroByPrice(e, true)
   },
 
   // 监听自定义组件 search-com 触发的search事件
   searchHandler(e) {
-    let { heroList } = this.data
+    let {
+      heroList
+    } = this.data
     if (e.detail === '') {
       this.setData({
         sort: '',
-        showHeroList: heroList
+        nowSkip: 0,
+        nowHeroList: heroList,
+        showHeroList: heroList.slice(0, 10)
       })
       return
     }
@@ -180,33 +188,42 @@ Page({
     })
     this.setData({
       sort: '',
-      showHeroList: list
+      nowSkip: 0,
+      nowHeroList: list,
+      showHeroList: list.slice(0, 10)
     })
   },
 
   // 根据price 排序英雄 asc 升序 desc 降序
   // 进行排序时 应该重置 scroll-view 的滚动位置
-  sortHeroByPrice(e) {
+  sortHeroByPrice(e, noClick) {
     let {
       sort,
+      nowSkip,
+      nowHeroList,
       showHeroList
     } = this.data
-
-    sort = sort !== '' ? (sort === 'asc' ? 'desc' : 'asc') : 'asc'
+    if (noClick) {
+      sort = sort !== '' ? sort : 'asc'
+    } else {
+      sort = sort !== '' ? (sort === 'asc' ? 'desc' : 'asc') : 'asc'
+    }
 
     if (sort === 'asc') {
-      showHeroList.sort((a, b) => {
+      nowHeroList.sort((a, b) => {
         return (a.price - b.price)
       })
     } else {
-      showHeroList.sort((a, b) => {
+      nowHeroList.sort((a, b) => {
         return (b.price - a.price)
       })
     }
 
     this.setData({
       sort,
-      showHeroList
+      nowHeroList,
+      nowSkip: 0,
+      showHeroList: nowHeroList.slice(0, 10)
     })
     // 重置位置
     this.scrollToTop()
@@ -251,7 +268,9 @@ Page({
     this.setData({
       filterValue: detail,
       filterType_: filterType,
-      showHeroList: list
+      nowHeroList: list,
+      showHeroList: list.slice(0, 10),
+      nowSkip: 0
     })
     // 重置位置
     this.scrollToTop()
@@ -277,9 +296,14 @@ Page({
   // 获取数据
   fetchData() {
     const _this = this
+    wx.showLoading({
+      title: 'loading',
+    })
     wx.cloud.callFunction({
       name: 'heros',
       complete(res) {
+        wx.hideLoading()
+        wx.stopPullDownRefresh()
         let list = res.result.list.map(hero => {
           return Object.assign({}, hero, {
             headPic: `cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/${hero.heroId}.png`,
@@ -288,65 +312,94 @@ Page({
         })
         _this.setData({
           heroList: list,
-          showHeroList: list
+          nowHeroList: list,
+          showHeroList: list.slice(0, 10)
         })
       }
+    })
+  },
+
+  // 滚动触底
+  scrollReachBottom() {
+    let {
+      nowHeroList,
+      showHeroList,
+      nowSkip
+    } = this.data
+    if (showHeroList.length === nowHeroList.length) {
+      return
+    }
+    nowSkip += 1;
+    this.setData({
+      nowSkip: nowSkip,
+      showHeroList: nowHeroList.slice(0, (nowSkip + 1) * 10)
     })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.fetchData()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
+  onPullDownRefresh: function() {
+    this.setData({
+      mode: false,
+      heroList: [],
+      nowHeroList: [],
+      showHeroList: [],
+      sort: '',
+      nowSkip: 0,
+      filterValue: 0,
+      filterType: '',
+      filterType_: '',
+      filterShow: -1
+    },this.fetchData())
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })
