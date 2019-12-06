@@ -37,6 +37,8 @@ Page({
           _this.setData({
             list: list.concat(res.result.data)
           })
+          //本地存储
+          wx.setStorageSync('teamList', _this.data.list)
           if (res.result.data.length < 15) {
             _this.setData({
               isOver: true
@@ -47,7 +49,6 @@ Page({
             isOver: true
           })
         }
-
       }
     })
   },

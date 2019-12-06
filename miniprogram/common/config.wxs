@@ -1,0 +1,5 @@
+module.exports = {
+  cloud_cham_icons_url: 'cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/',
+  cloud_items_url: 'cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/items/',
+  cloud_skills: 'cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/skills/'
+};

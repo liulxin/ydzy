@@ -1,10 +1,11 @@
 <!--miniprogram/pages/hero-detail/hero-detail.wxml-->
+<wxs src="../../common/config.wxs" module="config" />
 <view class="hero-detail" wx:if="{{heroInfo}}">
   <view class="top">
-    <image class="bg" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{heroInfo.heroId}}.jpg" mode="widthFix"></image>
+    <image class="bg" src="{{config.cloud_cham_icons_url}}{{heroInfo.heroId}}.jpg" mode="widthFix"></image>
     <view class="info-wrap flex">
       <view class="flex flex-column hd">
-        <image class="head" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{heroInfo.heroId}}.png" mode="widthFix"></image>
+        <image class="head" src="{{config.cloud_cham_icons_url}}{{heroInfo.heroId}}.png" mode="widthFix"></image>
         <text class="price">{{heroInfo.price}}</text>
       </view>
       <view class="flex-1 flex flex-column jc-around" style="color: #fff; font-size: 28rpx;margin-left: 30rpx;">
@@ -36,7 +37,7 @@
   <card title="技能">
     <view class="skill">
       <view class="flex">
-        <image class="ico" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/skills/{{heroInfo.heroId}}.png" mode="widthFix"></image>
+        <image class="ico" src="{{config.cloud_skills}}{{heroInfo.heroId}}.png" mode="widthFix"></image>
         <view class="flex flex-column jc-around p-10">
           <view>{{heroInfo.skill_name}}</view>
           <view>{{heroInfo.skill_type}}</view>
@@ -66,17 +67,17 @@
   </card>
   <!-- 推荐装备 -->
   <card title="推荐装备">
-    <image class="equipment" wx:for="{{heroInfo.equipment}}" mode="widthFix" wx:for-item="equipment" wx:key="index" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/items/{{equipment}}.png"></image>
+    <image class="equipment" wx:for="{{heroInfo.equipment}}" mode="widthFix" wx:for-item="equipment" wx:key="index" src="{{config.cloud_items_url}}{{equipment}}.png"></image>
   </card>
   <!-- 协同英雄 -->
   <card title="协同英雄">
     <view class="flex cooperate flex-wrap jc-start">
       <navigator wx:for="{{heroInfo.jobList.data}}" wx:for-item="job" wx:key="index" class="j" url="/pages/hero-detail/hero-detail?id={{job.heroId}}">
-        <image lazy-load="true" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{job.heroId}}.png"></image>
+        <image lazy-load="true" src="{{config.cloud_cham_icons_url}}{{job.heroId}}.png"></image>
         <view class="name">{{job.hero_name}}</view>
       </navigator>
       <navigator wx:for="{{heroInfo.raceList.data}}" wx:for-item="race" wx:key="index" class="r" url="/pages/hero-detail/hero-detail?id={{race.heroId}}">
-        <image lazy-load="true" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{race.heroId}}.png"></image>
+        <image lazy-load="true" src="{{config.cloud_cham_icons_url}}{{race.heroId}}.png"></image>
         <view class="name">{{race.hero_name}}</view>
       </navigator>
     </view>

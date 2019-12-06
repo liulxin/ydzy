@@ -1,9 +1,10 @@
 <!--miniprogram/pages/goods/goods.wxml-->
+<wxs src="../../common/config.wxs" module="config" />
 <view class="goods-list">
   <search-com search-class="goods-search" bind:search="searchHandler"></search-com>
   <view class="flex jc-between p-10 ai-center">
     <view data-index="{{index}}" wx:for="{{baseList}}" wx:for-item="item" wx:key="equipmentId" class="base {{activeIndex === index ? 'active' : ''}}" bindtap="baseChange">
-      <image src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/items/{{item.equipmentId}}.png" mode="widthFix"></image>
+      <image src="{{config.cloud_items_url}}{{item.equipmentId}}.png" mode="widthFix"></image>
     </view>
   </view>
   <view class="flex p-10 title">
@@ -13,7 +14,7 @@
   </view>
   <view wx:for="{{showList}}" wx:for-item="item" wx:key="equipmentId" class="flex p-10 equipment">
     <view class="eq flex flex-column jc-start">
-      <image src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/items/{{item.equipmentId}}.png" mode="widthFix"></image>
+      <image src="{{config.cloud_items_url}}{{item.equipmentId}}.png" mode="widthFix"></image>
     </view>
     <view class="flex flex-1 ef flex-column">
       <view>{{item.eq_name}}</view>
@@ -21,7 +22,7 @@
     </view>
     <view class="mul flex">
       <view wx:for="{{item.eq_formula}}" wx:for-item="eq" wx:key="index" class="mr-10">
-        <image lazy-load="true" wx:if="{{eq}}" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/items/{{eq}}.png" mode="widthFix"></image>
+        <image lazy-load="true" wx:if="{{eq}}" src="{{config.cloud_items_url}}{{eq}}.png" mode="widthFix"></image>
       </view>
     </view>
   </view>

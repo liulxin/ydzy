@@ -1,0 +1,14 @@
+<!--components/hero-eq/hero-eq.wxml-->
+<wxs src="../../common/config.wxs" module="config" />
+<view class="hero-eq">
+  <view wx:for="{{heroList}}" wx:for-item="hero" wx:key="heroId" class="wrap">
+    <view class="hero"><image src="{{config.cloud_cham_icons_url}}{{hero.heroId}}.png"></image></view>
+    <view class="rep"> -- </view>
+    <view wx:for="{{hero.equipment_id}}" wx:for-item="eq" wx:key="eqId" class="vieww">
+      <image src="{{config.cloud_items_url}}{{eq.eqId}}.png" class="up"></image>
+      <view class="down">
+        <image class="compose" wx:for="{{eq.compose}}" wx:for-item="equipment_id" wx:key="index" src="{{config.cloud_items_url}}{{equipment_id}}.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<!--miniprogram/pages/team-detail/team-detail.wxml-->
+<wxs src="../../common/config.wxs" module="config" />
+<view class="team-detail">
+  <view class="author flex">
+    <image class="ml-20 mt-10 mr-10" src="../../images/author.png"></image>
+    {{teamInfo.authorName}}
+  </view>
+  <card title="{{teamInfo.line_name}}" card-class="team-d-card">
+    <view class="flex flex-wrap jc-between jr-w">
+      <view class="jr" wx:for="{{teamInfo.jobRaceArr}}" wx:for-item="jr" wx:key="index">
+        <text>{{jr.num}}</text>
+        <text>{{jr.name}}</text>
+      </view>
+    </view>
+    <view class="mt-20" wx:if="{{teamInfo.early_heros}}">
+      <view class="tip mb-10">前期开局</view>
+      <flex-head str="{{teamInfo.early_heros}}"></flex-head>
+    </view>
+    <view class="mt-20" wx:if="{{teamInfo.metaphase_heros}}">
+      <view class="tip mb-10">中期过渡</view>
+      <flex-head str="{{teamInfo.metaphase_heros}}"></flex-head>
+    </view>
+    <view class="mt-20">
+      <view class="tip mb-10">最终阵容</view>
+      <view class="flex">
+        <image class="head" wx:for="{{teamInfo.line_hero}}" wx:for-item="hero" wx:key="index" src="{{config.cloud_cham_icons_url}}{{hero}}.png"></image>
+      </view>
+    </view>
+    <view class="mt-20" wx:if="{{teamInfo.hero_replace}}">
+      <view class="tip mb-10">备选英雄</view>
+      <view class="flex mt-10" wx:for="{{teamInfo.hero_replace}}" wx:for-item="item" wx:key="index">
+        <image class="head" src="{{config.cloud_cham_icons_url}}{{item.hero_id}}.png"></image>
+        <view class="rep mr-10"> -- </view>
+        <image class="head" wx:for="{{item.replace_heros}}" wx:for-item="hh" wx:key="index" src="{{config.cloud_cham_icons_url}}{{hh}}.png"></image>
+      </view>
+    </view>
+    <view class="tips">
+      <view class="mt-20" wx:if="{{teamInfo.early_info}}">
+        <view class="tip mb-10">前期过渡</view>
+        <text>{{teamInfo.early_info}}</text>
+      </view>
+      <view class="mt-20" wx:if="{{teamInfo.equipment_info}}">
+        <view class="tip mb-10">装备分配</view>
+        <text>{{teamInfo.equipment_info}}</text>
+      </view>
+      <view class="mt-20" wx:if="{{teamInfo.location_info}}">
+        <view class="tip mb-10">阵型站位</view>
+        <text>{{teamInfo.location_info}}</text>
+      </view>
+      <view class="mt-20" wx:if="{{teamInfo.enemy_info}}">
+        <view class="tip mb-10">克制分析</view>
+        <text>{{teamInfo.enemy_info}}</text>
+      </view>
+    </view>
+  </card>
+  <view class="share-btn">
+    <button open-type="share" size="mini" plain="true">分享给好友</button>
+  </view>
+</view>

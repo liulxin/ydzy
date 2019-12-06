@@ -1,0 +1,53 @@
+/* components/hero-eq/hero-eq.wxss */
+
+.hero-eq image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.hero-eq .wrap {
+  background: #f0f3fc;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  display: flex;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rep {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 10rpx;
+}
+
+.vieww {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20rpx;
+}
+
+.vieww .up {
+  margin: 0 auto;
+}
+
+.vieww .down {
+  display: flex;
+  margin-top: 10rpx;
+  justify-content: space-between;
+}
+
+.vieww .down .compose {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 10rpx;
+}
+
+.vieww .down .compose:nth-last-of-type(1) {
+  margin-right: 0;
+}

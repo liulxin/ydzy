@@ -1,0 +1,5 @@
+<!--components/flex-head/flex-head.wxml-->
+<wxs src="../../common/config.wxs" module="config" />
+<view class="flex-head">
+  <image class="head" wx:for="{{list}}" wx:for-item="item" wx:key="index" src="{{config.cloud_cham_icons_url}}{{item}}.png"></image>
+</view>

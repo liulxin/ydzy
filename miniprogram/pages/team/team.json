@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "card": "/components/card/card"
+    "card": "/components/card/card",
+    "hot": "/components/hot/hot"
   },
   "enablePullDownRefresh": true
 }

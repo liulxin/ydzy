@@ -1,0 +1,66 @@
+/* miniprogram/pages/team-detail/team-detail.wxss */
+
+.author {
+  font-size: 32rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.author image {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+
+.team-d-card {
+  color: #161616;
+}
+
+.jr {
+  background: #1d1b1c;
+  width: 23%;
+  height: 50rpx;
+  color: #e7e7e7;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 5rpx;
+  box-sizing: border-box;
+  margin: 10rpx 1%;
+}
+
+.jr-w::after {
+  content: '';
+  flex: 1;
+}
+
+.tip {
+  font-size: 32rpx;
+  color: #202020;
+}
+
+.head {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 10rpx;
+}
+
+.rep {
+  line-height: 70rpx;
+  height: 70rpx;
+}
+
+.tips {
+  margin-top: 20rpx;
+  border-top: 1px solid #e7e7e7;
+}
+
+.tips text {
+  font-size: 24rpx;
+  color: #706b6b;
+}
+
+.share-btn {
+  margin: 20rpx 0;
+  text-align: center;
+}

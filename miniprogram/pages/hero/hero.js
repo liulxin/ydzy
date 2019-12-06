@@ -304,12 +304,7 @@ Page({
       complete(res) {
         wx.hideLoading()
         wx.stopPullDownRefresh()
-        let list = res.result.list.map(hero => {
-          return Object.assign({}, hero, {
-            headPic: `cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/${hero.heroId}.png`,
-            bgPic: `cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/${hero.heroId}.jpg`
-          })
-        })
+        let list = res.result.list
         _this.setData({
           heroList: list,
           nowHeroList: list,
@@ -334,6 +329,7 @@ Page({
       nowSkip: nowSkip,
       showHeroList: nowHeroList.slice(0, (nowSkip + 1) * 10)
     })
+    
   },
 
   /**

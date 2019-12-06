@@ -1,0 +1,10 @@
+/* components/flex-head/flex-head.wxss */
+.flex-head{
+  display: flex;
+  justify-content: flex-start;
+}
+.head {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 10rpx;
+}

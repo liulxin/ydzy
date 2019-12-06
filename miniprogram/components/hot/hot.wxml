@@ -1,0 +1,4 @@
+<!--components/hot/hot.wxml-->
+<view class="hotv">
+  <image wx:for="{{hot}}" wx:for-item="h" wx:key="index" class="hot" src="../../images/hot.png"></image>
+</view>

@@ -1,3 +1,4 @@
+<wxs src="../../common/config.wxs" module="config" />
 <view class="hero-view flex flex-column" bindtap="removeFilter">
   <view class="fixed">
     <!-- 搜索区域 -->
@@ -59,12 +60,12 @@
             </view>
           </view>
         </view>
-        <image class="pic" src="{{hero.bgPic}}" mode="widthFix" lazy-load="true" />
+        <image class="pic" src="{{config.cloud_cham_icons_url}}{{hero.heroId}}.jpg" mode="widthFix" lazy-load="true" />
       </view>
       <!-- list -->
       <view wx:else class="flex jc-between">
         <view class="flex jc-start al-center flex-1">
-          <image class="pic" src="{{hero.headPic}}" mode="widthFix" lazy-load="true" />
+          <image class="pic" src="{{config.cloud_cham_icons_url}}{{hero.heroId}}.png" mode="widthFix" lazy-load="true" />
           <text class="bname">{{hero.hero_name}}</text>
         </view>
         <view class="flex jc-center flex-column br">

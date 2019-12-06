@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "card": "/components/card/card",
+    "flex-head": "/components/flex-head/flex-head",
+    "hero-eq": "/components/hero-eq/hero-eq"
+  }
+}

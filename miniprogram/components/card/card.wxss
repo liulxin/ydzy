@@ -28,10 +28,11 @@
 .card-header .title {
   padding-left: 15rpx;
   padding-right: 15rpx;
-  color: #000;
+  color: #757776;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 28rpx;
 }
 
 .card-body {

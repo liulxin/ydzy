@@ -32,6 +32,7 @@ Page({
         let list = data.map(item => Object.assign({}, item, {
           eq_formula: item.eq_formula.split(',')
         }))
+        wx.setStorageSync('goodsList', list)
         _this.setData({
           activeIndex: -1,
           list: list,

@@ -1,4 +1,4 @@
-@import './style/common.wxss';
+/* @import './style/common.wxss'; */
 
 view{
   box-sizing: border-box;

@@ -1,15 +1,18 @@
-// components/card/card.js
+// components/flex-head/flex-head.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    title: {
+    str: {
       type: String,
-      value: ''
+      observer: function(newV, oldV) {
+        this.setData({
+          list: newV.split(',')
+        })
+      }
     }
   },
-  externalClasses: ['card-class'],
 
   /**
    * 组件的初始数据

@@ -1,10 +1,23 @@
 <!--miniprogram/pages/team/team.wxml-->
+<wxs src="../../common/config.wxs" module="config" />
 <view class="teams">
-  <card wx:for="{{list}}" wx:for-item="team" wx:key="index" title="{{team.line_name}}" wx:if="{{team.line_name}}">
-    <view class="flex jc-start flex-wrap">
-      <view wx:for="{{team.hero_location}}" wx:for-item="hero" wx:key="hero_id" class="mr-10">
-        <image class="head" src="cloud://ydzy-yun-3c5429.7964-ydzy-yun-3c5429-1300746035/cham-icons/{{hero.hero_id}}.png"></image>
-      </view>
-    </view>
-  </card>
+  <block wx:for="{{list}}" wx:for-item="team" wx:key="index">
+    <navigator hover-class="none" url="../team-detail/team-detail?id={{team._id}}" wx:if="{{team.line_name}}">
+      <card title="{{team.line_name}}">
+        <view class="flex jc-start flex-wrap">
+          <view wx:for="{{team.line_hero}}" wx:for-item="hero" wx:key="index" class="mr-10">
+            <image class="head" src="{{config.cloud_cham_icons_url}}{{hero}}.png"></image>
+          </view>
+        </view>
+        <view class="flex jc-between inf">
+          <hot hotClass="{{team.hotClass}}" />
+          <view wx:if="{{team.authorName}}" class="flex-1 tx-left author">
+            <image src="../../images/author.png"></image>
+            {{team.authorName}}
+          </view>
+          <view>阵容详情 > </view>
+        </view>
+      </card>
+    </navigator>
+  </block>
 </view>

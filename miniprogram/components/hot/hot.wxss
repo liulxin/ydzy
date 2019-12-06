@@ -1,0 +1,8 @@
+/* components/hot/hot.wxss */
+.hotv{
+  width: 120rpx;
+}
+.hot{
+  width: 20rpx;
+  height: 20rpx;
+}

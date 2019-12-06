@@ -67,7 +67,8 @@ page, .hero-view {
   transition: all 0.3s;
   font-size: 32rpx;
 }
-.filter view.active{
+
+.filter view.active {
   color: #29aba3;
 }
 
@@ -87,7 +88,8 @@ page, .hero-view {
   transition: height 0.3s;
   width: 100%;
 }
-.filter-area.hide{
+
+.filter-area.hide {
   height: 0;
   transition: height 0.3s;
 }
@@ -167,6 +169,7 @@ page, .hero-view {
   border-radius: 10rpx;
   overflow: hidden;
   background: #1d182e;
+  width: 100%;
 }
 
 .champion .info {
