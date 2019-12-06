@@ -2,6 +2,9 @@
 
 包含英雄、英雄详情、装备、阵容、阵容详情 5 个页面
 
+## 预览
+![仿掌上英雄联盟云顶之弈](https://upload-images.jianshu.io/upload_images/9279065-e296f0f617727d00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ## 功能
 1. 英雄列表切换、排序、筛选、搜索、详情跳转
 2. 英雄详情、跳转
