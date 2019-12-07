@@ -1,0 +1,93 @@
+<view class="chance p-20">
+  <view class="title">棋子刷新概率表</view>
+  <view>
+    <view class="tip">①代表在随机池中该品质的棋子种类总数，所有玩家将共享一个随机池。</view>
+    <view class="tip">②代表在对应人口等级下，你的商店能刷新到该品质棋子的概率。</view>
+  </view>
+  <view class="table">
+    <view class="flex name jc-between">
+      <view>人口等级</view>
+      <view class="sn">1阶(29)
+        <text class="num">①</text>
+      </view>
+      <view>2阶(22)</view>
+      <view>3阶(16)</view>
+      <view>4阶(12)</view>
+      <view>5阶(10)</view>
+    </view>
+    <view class="flex jc-between">
+      <view>1</view>
+      <view class="sn">100%
+        <text class="num">②</text>
+      </view>
+      <view>0%</view>
+      <view>0%</view>
+      <view>0%</view>
+      <view>0%</view>
+    </view>
+    <view class="flex jc-between">
+      <view>2</view>
+      <view>100%</view>
+      <view>0%</view>
+      <view>0%</view>
+      <view>0%</view>
+      <view>0%</view>
+    </view>
+    <view class="flex jc-between">
+      <view>3</view>
+      <view>70%</view>
+      <view>25%</view>
+      <view>5%</view>
+      <view>0%</view>
+      <view>0%</view>
+    </view>
+    <view class="flex jc-between">
+      <view>4</view>
+      <view>50%</view>
+      <view>35%</view>
+      <view>15%</view>
+      <view>0%</view>
+      <view>0%</view>
+    </view>
+    <view class="flex jc-between">
+      <view>5</view>
+      <view>35%</view>
+      <view>35%</view>
+      <view>25%</view>
+      <view>5%</view>
+      <view>0%</view>
+    </view>
+    <view class="flex jc-between">
+      <view>6</view>
+      <view>25%</view>
+      <view>35%</view>
+      <view>30%</view>
+      <view>10%</view>
+      <view>0%</view>
+    </view>
+    <view class="flex jc-between">
+      <view>7</view>
+      <view>20%</view>
+      <view>30%</view>
+      <view>33%</view>
+      <view>15%</view>
+      <view>2%</view>
+    </view>
+    <view class="flex jc-between">
+      <view>8</view>
+      <view>15%</view>
+      <view>20%</view>
+      <view>35%</view>
+      <view>22%</view>
+      <view>8%</view>
+    </view>
+    <view class="flex jc-between">
+      <view>9</view>
+      <view>10%</view>
+      <view>15%</view>
+      <view>30%</view>
+      <view>30%</view>
+      <view>15%</view>
+    </view>
+  </view>
+</view>

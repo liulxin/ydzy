@@ -1,0 +1,63 @@
+/* miniprogram/pages/chance/chance.wxss */
+
+page {
+  background: #232937;
+  height: 100%;
+}
+
+.title {
+  color: #deb762;
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px dashed #deb762;
+  margin-bottom: 20rpx;
+}
+
+.table {
+  margin-top: 20rpx;
+  border-top: 1px dashed #deb762;
+  padding-top: 10rpx;
+}
+
+.table > view {
+  text-align: center;
+  font-size: 24rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #232937;
+  color: #fff;
+}
+
+.table > view > view {
+  width: 16%;
+}
+
+.table > view:nth-of-type(2n) {
+  background: #1e2432;
+}
+
+.table .name {
+  color: #ae773a;
+}
+
+.sn {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.sn .num {
+  position: absolute;
+  top: 0rpx;
+  right: -8rpx;
+  line-height: 20rpx;
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.tip {
+  line-height: 40rpx;
+  font-size: 20rpx;
+  color: #acb0ba;
+}

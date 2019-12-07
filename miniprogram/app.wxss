@@ -22,6 +22,9 @@ view{
 .p-10{
   padding: 10rpx;
 }
+.p-20{
+  padding: 20rpx;
+}
 
 .border-bottom {
   border-bottom: 1px solid #ebebeb;

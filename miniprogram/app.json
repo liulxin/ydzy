@@ -4,7 +4,8 @@
     "pages/goods/goods",
     "pages/team/team",
     "pages/hero-detail/hero-detail",
-    "pages/team-detail/team-detail"
+    "pages/team-detail/team-detail",
+    "pages/chance/chance"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -36,6 +37,12 @@
         "text": "阵容",
         "iconPath": "images/team.png",
         "selectedIconPath": "images/team-active.png"
+      },
+      {
+        "pagePath": "pages/chance/chance",
+        "text": "概率",
+        "iconPath": "images/chance.png",
+        "selectedIconPath": "images/chance-active.png"
       }
     ]
   }
